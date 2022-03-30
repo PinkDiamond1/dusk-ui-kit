@@ -97,4 +97,7 @@ Basic.args = {
       </Menu>
     </svelte:fragment>
   </Navbar>
+  <main id="dusk">
+    <p>Some content</p>
+  </main>
 </Story>

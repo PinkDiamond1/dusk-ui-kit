@@ -1,5 +1,5 @@
 .duk-navbar {
-  @apply flex flex-col w-full bg-gray-100;
+  @apply flex flex-col w-full bg-gray-100 absolute top-0 left-0 z-10 transition-all ease-out duration-500;
   @apply dark:bg-gray-900;
 
   &__wrapper {
@@ -142,8 +142,7 @@
   }
 
   &--hidden {
-    @apply h-auto;
-    @apply bg-transparent;
+    @apply h-auto bg-transparent relative;
     @apply dark:bg-transparent;
     @apply md:bg-gray-100;
     @apply md:dark:bg-gray-900;
