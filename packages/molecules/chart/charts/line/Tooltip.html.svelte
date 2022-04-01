@@ -41,7 +41,8 @@
   /**Format timestamp to DD-MM-YYYY format*/
   function formatTime(timestamp) {
     let date = new Date(timestamp);
-    return date.getDate() + "-" + date.getMonth() + "-" + date.getFullYear();
+    let month = parseInt(date.getMonth(), 10) + 1;
+    return date.getDate() + "-" + month + "-" + date.getFullYear();
   }
 </script>
 
