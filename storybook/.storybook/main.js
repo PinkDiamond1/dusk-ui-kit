@@ -102,7 +102,6 @@ module.exports = {
         },
       },
     },
-    "@storybook/addon-a11y",
     "@storybook/addon-svelte-csf",
     "storybook-dark-mode",
     "@storybook/addon-jest",
