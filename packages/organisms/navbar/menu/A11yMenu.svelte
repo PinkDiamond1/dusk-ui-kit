@@ -1,9 +1,9 @@
 <script>
-  import { setContext, afterUpdate, createEventDispatcher } from "svelte";
-  import { getCookie, setCookie, deleteCookie } from "@dusk-network/helpers/cookie-utils.js";
-  import DarkMode from "svelte-dark-mode";
+  import { setContext, createEventDispatcher } from "svelte";
+  // import { getCookie, setCookie, deleteCookie } from "@dusk-network/helpers/cookie-utils.js";
+  // import DarkMode from "svelte-dark-mode";
   import Menu, { Item } from "@dusk-network/menu";
-  import Toggle from "@dusk-network/toggle";
+  // import Toggle from "@dusk-network/toggle";
   import Button from "@dusk-network/button";
   import Icon from "@dusk-network/icon";
   import contexts from "@dusk-network/helpers/contexts.js";
@@ -11,44 +11,44 @@
   /**
    * Sets the cookie name for the Cookie Banner.
    */
-  export let cookieName = "DUSK-A11Y";
+  // export let cookieName = "DUSK-A11Y";
 
   /**
    * Sets the configuration object used by the cookie.
    * Contains the cookie options as defined here: https://github.com/js-cookie/js-cookie#cookie-attributes
    */
-  export let cookieConfig = {
-    expires: 365,
-  };
+  // export let cookieConfig = {
+  //   expires: 365,
+  // };
 
   const dispatch = createEventDispatcher();
 
-  let theme;
+  // let theme;
 
-  $: switchTheme = theme === "dark" ? "light" : "dark";
-  $: isDarkMode = theme === "dark";
+  // $: switchTheme = theme === "dark" ? "light" : "dark";
+  // $: isDarkMode = theme === "dark";
 
-  afterUpdate(() => {
-    document.documentElement.className = theme;
+  // afterUpdate(() => {
+  //   document.documentElement.className = theme;
 
-    if (!cookieName) {
-      throw new Error("cookieName is required");
-    }
+  //   if (!cookieName) {
+  //     throw new Error("cookieName is required");
+  //   }
 
-    const cookie = getCookie(cookieName);
+  //   const cookie = getCookie(cookieName);
 
-    if (!cookie) {
-      setCookie(cookieName, { theme }, cookieConfig);
-    } else {
-      deleteCookie(cookieName, cookieConfig);
-      setCookie(cookieName, { theme }, cookieConfig);
-    }
-  });
+  //   if (!cookie) {
+  //     setCookie(cookieName, { theme }, cookieConfig);
+  //   } else {
+  //     deleteCookie(cookieName, cookieConfig);
+  //     setCookie(cookieName, { theme }, cookieConfig);
+  //   }
+  // });
 
   setContext("DUK:menu:context", contexts.MENU.NAVBAR);
 </script>
 
-<DarkMode bind:theme />
+<!-- <DarkMode bind:theme /> -->
 
 <Menu orientation="horizontal" class="duk-navbar__a11y-menu">
   <Item>
@@ -56,7 +56,7 @@
       <Icon name="cog-outline" />
     </Button>
   </Item>
-  <Item>
+  <!-- <Item>
     <Toggle
       type="switch"
       variant="brand-invert"
@@ -68,5 +68,5 @@
       on:click="{() => (theme = switchTheme)}"
       value="{isDarkMode ? true : false}"
     />
-  </Item>
+  </Item> -->
 </Menu>
