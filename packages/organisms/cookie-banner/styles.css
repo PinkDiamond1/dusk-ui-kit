@@ -32,6 +32,10 @@
 
     & > .duk-card {
       @apply w-max;
+
+      & > .duk-heading {
+        @apply !justify-between;
+      }
     }
   }
 }
