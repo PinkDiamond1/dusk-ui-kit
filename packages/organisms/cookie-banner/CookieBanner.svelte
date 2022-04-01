@@ -50,6 +50,11 @@
    */
   export let showSettings = false;
 
+  /**
+   * Sets the closing of the settings on the scrim
+   */
+  export let toggleScrim = false;
+
   const dispatch = createEventDispatcher();
 
   let fields = {
@@ -91,6 +96,12 @@
   //   const { path } = cookieConfig;
   //   Cookies.remove(cookieName, Object.assign({}, path ? { path } : {}));
   // };
+
+  function closeSettingsScrim(bool) {
+    if (bool) {
+      dispatch("closeSettings");
+    }
+  }
 </script>
 
 <svelte:window
@@ -107,6 +118,7 @@
   id="{id}"
   class="duk-cookie-banner"
   class:duk-cookie-banner--with-settings="{showSettings === true}"
+  on:click="{() => closeSettingsScrim(toggleScrim)}"
 >
   {#if showBanner === true}
     <div class="{$$props.class || ''} duk-cookie-banner__banner">
