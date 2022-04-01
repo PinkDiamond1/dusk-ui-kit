@@ -1,9 +1,11 @@
 <script>
-  import { onMount, createEventDispatcher } from "svelte";
+  import { onMount, afterUpdate, createEventDispatcher } from "svelte";
   import { getCookie, setCookie, deleteCookie } from "@dusk-network/helpers/cookie-utils.js";
+  import DarkMode from "svelte-dark-mode";
   import Button from "@dusk-network/button";
   import Content from "@dusk-network/content";
   import Heading from "@dusk-network/heading";
+  import RichText from "@dusk-network/RichText";
   import Control from "@dusk-network/control";
   import Toggle from "@dusk-network/toggle";
   import Card from "@dusk-network/card";
@@ -18,9 +20,14 @@
   export let id = "__DUK-cookie-banner" + Math.random().toString(36);
 
   /**
-   * Sets the cookie name for the Cookie Banner.
+   * Sets the cookie name for the Cookie Banner GDPR.
    */
   export let cookieName = "DUSK-GDPR";
+
+  /**
+   * Sets the cookie name for the Dark Mode
+   */
+  export let darkModeCookieName = "DUSK-A11Y";
 
   /**
    * Sets the configuration object used by the cookie.
@@ -59,6 +66,11 @@
     marketing: false,
   };
 
+  let theme;
+
+  $: switchTheme = theme === "dark" ? "light" : "dark";
+  $: isDarkMode = theme === "dark";
+
   onMount(() => {
     if (!cookieName) {
       throw new Error("cookieName is required");
@@ -77,6 +89,23 @@
     } catch (e) {
       deleteCookie(cookieName, cookieConfig);
       showBanner = true;
+    }
+  });
+
+  afterUpdate(() => {
+    document.documentElement.className = theme;
+
+    if (!darkModeCookieName) {
+      throw new Error("cookieName is required");
+    }
+
+    const cookie = getCookie(darkModeCookieName);
+
+    if (!cookie) {
+      setCookie(darkModeCookieName, { theme }, cookieConfig);
+    } else {
+      deleteCookie(darkModeCookieName, cookieConfig);
+      setCookie(darkModeCookieName, { theme }, cookieConfig);
     }
   });
 
@@ -102,7 +131,7 @@
     }
   }}"
 />
-
+<DarkMode bind:theme />
 <div
   id="{id}"
   class="duk-cookie-banner"
@@ -137,7 +166,7 @@
     <div class="duk-cookie-banner__settings">
       <Card>
         <Heading>
-          <h2>Cookie settings</h2>
+          <h2>Settings</h2>
           <svelte:fragment slot="button">
             <Button
               size="sm"
@@ -151,6 +180,7 @@
           </svelte:fragment>
         </Heading>
         <Content>
+          <RichText>Cookies</RichText>
           <Control
             name="essential"
             type="inline-fixed"
@@ -208,6 +238,24 @@
               checked="{fields.marketing}"
               on:change="{() => setCookie(cookieName, fields, cookieConfig)}"
               on:change="{() => dispatch('marketing', fields.marketing)}"
+            />
+          </Control>
+          <RichText>Dark Mode</RichText>
+          <Control
+            name="darkMode"
+            type="inline-fixed"
+            width="full"
+            label="Toggle dark mode"
+            message="Used to toggle dark mode on and off."
+          >
+            <Toggle
+              name="darkMode"
+              id="__DUK-dark-mode"
+              onIcon="brightness-4"
+              offIcon="brightness-5"
+              bind:checked="{isDarkMode}"
+              on:click="{() => (theme = switchTheme)}"
+              value="{isDarkMode ? true : false}"
             />
           </Control>
         </Content>
