@@ -29,6 +29,7 @@
     "@dusk-network/heading": "workspace:*",
     "@dusk-network/helpers": "workspace:*",
     "@dusk-network/icon": "workspace:*",
+    "@dusk-network/rich-text": "workspace:*",
     "@dusk-network/toggle": "workspace:*"
   },
   "peerDependencies": {
@@ -40,6 +41,7 @@
     "@dusk-network/heading": "workspace:*",
     "@dusk-network/helpers": "workspace:*",
     "@dusk-network/icon": "workspace:*",
+    "@dusk-network/rich-text": "workspace:*",
     "@dusk-network/toggle": "workspace:*"
   },
   "gitHead": "d5d1f5840af462c7f692fd2dc980e038d71f57c8",
