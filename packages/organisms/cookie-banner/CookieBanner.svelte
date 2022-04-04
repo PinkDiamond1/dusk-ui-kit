@@ -1,6 +1,7 @@
 <script>
   import { onMount, createEventDispatcher } from "svelte";
   import { getCookie, setCookie, deleteCookie } from "@dusk-network/helpers/cookie-utils.js";
+  import { clickOutside } from "@dusk-network/helpers/scrim-utils.js";
   import Button from "@dusk-network/button";
   import Content from "@dusk-network/content";
   import Heading from "@dusk-network/heading";
@@ -53,7 +54,7 @@
   /**
    * Sets the closing of the settings on the scrim
    */
-  export let toggleScrim = false;
+  export let closeScrim = false;
 
   const dispatch = createEventDispatcher();
 
@@ -118,7 +119,6 @@
   id="{id}"
   class="duk-cookie-banner"
   class:duk-cookie-banner--with-settings="{showSettings === true}"
-  on:click="{() => closeSettingsScrim(toggleScrim)}"
 >
   {#if showBanner === true}
     <div class="{$$props.class || ''} duk-cookie-banner__banner">
@@ -146,7 +146,11 @@
     </div>
   {/if}
   {#if showSettings === true}
-    <div class="duk-cookie-banner__settings">
+    <div
+      class="duk-cookie-banner__settings"
+      use:clickOutside
+      on:clickOutside="{closeSettingsScrim(closeScrim)}"
+    >
       <Card>
         <Heading>
           <h2>Cookie settings</h2>
