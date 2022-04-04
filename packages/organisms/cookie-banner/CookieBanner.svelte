@@ -274,6 +274,18 @@
               value="{isDarkMode ? true : false}"
             />
           </Control>
+          <Group align="center">
+            <Button
+              variant="cta"
+              on:click="{() => {
+                setCookie(cookieName, fields, cookieConfig);
+                showBanner = false;
+                dispatch('closeSettings');
+              }}"
+            >
+              Save
+            </Button>
+          </Group>
         </Content>
       </Card>
     </div>
