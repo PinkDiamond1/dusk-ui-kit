@@ -17,7 +17,8 @@
     "test": "echo \"Work in progress...\" && exit 1"
   },
   "dependencies": {
-    "js-cookie": "^3.0.1"
+    "js-cookie": "^3.0.1",
+    "svelte-dark-mode": "^2.0.0"
   },
   "devDependencies": {
     "@dusk-network/button": "workspace:*",
@@ -28,6 +29,7 @@
     "@dusk-network/heading": "workspace:*",
     "@dusk-network/helpers": "workspace:*",
     "@dusk-network/icon": "workspace:*",
+    "@dusk-network/rich-text": "workspace:*",
     "@dusk-network/toggle": "workspace:*"
   },
   "peerDependencies": {
@@ -39,6 +41,7 @@
     "@dusk-network/heading": "workspace:*",
     "@dusk-network/helpers": "workspace:*",
     "@dusk-network/icon": "workspace:*",
+    "@dusk-network/rich-text": "workspace:*",
     "@dusk-network/toggle": "workspace:*"
   },
   "gitHead": "d5d1f5840af462c7f692fd2dc980e038d71f57c8",
