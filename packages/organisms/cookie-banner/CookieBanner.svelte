@@ -5,7 +5,7 @@
   import Button from "@dusk-network/button";
   import Content from "@dusk-network/content";
   import Heading from "@dusk-network/heading";
-  import RichText from "@dusk-network/RichText";
+  import RichText from "@dusk-network/rich-text";
   import Control from "@dusk-network/control";
   import Toggle from "@dusk-network/toggle";
   import Card from "@dusk-network/card";
@@ -166,7 +166,7 @@
     <div class="duk-cookie-banner__settings">
       <Card>
         <Heading>
-          <h2>Settings</h2>
+          <h2><strong>Settings</strong></h2>
           <svelte:fragment slot="button">
             <Button
               size="sm"
@@ -180,7 +180,7 @@
           </svelte:fragment>
         </Heading>
         <Content>
-          <RichText>Cookies</RichText>
+          <RichText><strong>Cookies</strong></RichText>
           <Control
             name="essential"
             type="inline-fixed"
@@ -240,7 +240,7 @@
               on:change="{() => dispatch('marketing', fields.marketing)}"
             />
           </Control>
-          <RichText>Dark Mode</RichText>
+          <RichText><strong>Dark Mode</strong></RichText>
           <Control
             name="darkMode"
             type="inline-fixed"
