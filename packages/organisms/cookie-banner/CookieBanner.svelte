@@ -1,6 +1,7 @@
 <script>
   import { onMount, afterUpdate, createEventDispatcher } from "svelte";
   import { getCookie, setCookie, deleteCookie } from "@dusk-network/helpers/cookie-utils.js";
+  import { clickOutside } from "@dusk-network/helpers/scrim-utils.js";
   import DarkMode from "svelte-dark-mode";
   import Button from "@dusk-network/button";
   import Content from "@dusk-network/content";
@@ -56,6 +57,11 @@
    * Sets the visibility of the settings modal
    */
   export let showSettings = false;
+
+  /**
+   * Sets the closing of the settings on the scrim
+   */
+  export let closeScrim = false;
 
   const dispatch = createEventDispatcher();
 
@@ -120,6 +126,12 @@
   //   const { path } = cookieConfig;
   //   Cookies.remove(cookieName, Object.assign({}, path ? { path } : {}));
   // };
+
+  function closeSettingsScrim(bool) {
+    if (bool) {
+      dispatch("closeSettings");
+    }
+  }
 </script>
 
 <svelte:window
@@ -163,7 +175,11 @@
     </div>
   {/if}
   {#if showSettings === true}
-    <div class="duk-cookie-banner__settings">
+    <div
+      class="duk-cookie-banner__settings"
+      use:clickOutside
+      on:clickOutside="{closeSettingsScrim(closeScrim)}"
+    >
       <Card>
         <Heading>
           <h2><strong>Settings</strong></h2>
