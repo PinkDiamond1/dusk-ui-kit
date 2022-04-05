@@ -5,6 +5,7 @@
   // import results from "../../../../../.jest-test-results.json";
   // import { withTests } from "@storybook/addon-jest";
   import SkeletonLoader from "@dusk-network/skeleton-loader";
+  import Icon from "@dusk-network/icon";
   import Card from "@dusk-network/card";
   import Content from "@dusk-network/content";
   import Chart from "@dusk-network/chart";
