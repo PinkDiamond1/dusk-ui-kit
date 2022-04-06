@@ -32,6 +32,11 @@
     <slot name="error" />
   </svelte:fragment>
   <section class="duk-template__container">
+    <div class="duk-template-explorer-charts__control-panel">
+      <slot name="control-panel" isLoading="{isLoading['control-panel']}" />
+    </div>
+  </section>
+  <section class="duk-template__container">
     <div class="duk-template-explorer-charts__map">
       <slot name="map" isLoading="{isLoading['map']}" />
     </div>

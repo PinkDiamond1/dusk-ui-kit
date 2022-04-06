@@ -32,6 +32,16 @@
 
     & > .duk-card {
       @apply w-max;
+
+      & > .duk-heading {
+        @apply !justify-between;
+      }
+
+      & > .duk-content {
+        .duk-group:last-child {
+          @apply pt-5;
+        }
+      }
     }
   }
 }

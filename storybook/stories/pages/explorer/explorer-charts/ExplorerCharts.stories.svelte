@@ -5,13 +5,17 @@
   // import results from "../../../../../.jest-test-results.json";
   // import { withTests } from "@storybook/addon-jest";
   import SkeletonLoader from "@dusk-network/skeleton-loader";
+  import Icon from "@dusk-network/icon";
   import Card from "@dusk-network/card";
   import Content from "@dusk-network/content";
   import Chart from "@dusk-network/chart";
   import Heading from "@dusk-network/heading";
   import RichText from "@dusk-network/rich-text";
+  import Statistic from "@dusk-network/statistic";
+  import Group from "@dusk-network/group";
   import Navbar from "../_Navbar.svelte";
   import Footer from "../_Footer.svelte";
+  import Search from "../_Search.svelte";
   import meta from "../../../meta";
   import { marketData } from "./data.js";
 
@@ -71,6 +75,51 @@
   <Template isError="{args.isError}" isLoading="{args.isLoading}">
     <svelte:fragment slot="navbar">
       <Navbar />
+    </svelte:fragment>
+    <svelte:fragment slot="control-panel">
+      <Card>
+        <Content>
+          <Search />
+          <Group grid="{true}">
+            <Statistic title="DUSK Price">
+              <svelte:fragment slot="icon">
+                <Icon name="dusk-ticker" variant="brand" size="xxxl" />
+              </svelte:fragment>
+              <p>$0,2947 (<span class="text-green-500">+1.76%</span>)</p>
+            </Statistic>
+            <Statistic title="Estimated Total Staked">
+              <svelte:fragment slot="icon">
+                <Icon name="database" variant="brand" size="xxxl" />
+              </svelte:fragment>
+              <p>100.000.000 DUSK</p>
+            </Statistic>
+            <Statistic title="Market Cap">
+              <svelte:fragment slot="icon">
+                <Icon name="chart-areaspline" variant="brand" size="xxxl" />
+              </svelte:fragment>
+              <p>$108.048.497</p>
+            </Statistic>
+            <Statistic title="Transactions">
+              <svelte:fragment slot="icon">
+                <Icon name="pound-box-outline" variant="brand" size="xxxl" />
+              </svelte:fragment>
+              <p>150786</p>
+            </Statistic>
+            <Statistic title="Average Gas Price">
+              <svelte:fragment slot="icon">
+                <Icon name="gauge" variant="brand" size="xxxl" />
+              </svelte:fragment>
+              <p>1.54 DUSK</p>
+            </Statistic>
+            <Statistic title="Provisioners">
+              <svelte:fragment slot="icon">
+                <Icon name="contacts" variant="brand" size="xxxl" />
+              </svelte:fragment>
+              <p>88,880</p>
+            </Statistic>
+          </Group>
+        </Content>
+      </Card>
     </svelte:fragment>
     <svelte:fragment slot="map">
       <Card>

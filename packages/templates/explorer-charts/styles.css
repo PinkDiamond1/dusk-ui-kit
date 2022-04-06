@@ -1,4 +1,5 @@
 .duk-template-explorer-charts {
+  &__control-panel,
   &__map,
   &__market-data,
   &__blockchain-data {

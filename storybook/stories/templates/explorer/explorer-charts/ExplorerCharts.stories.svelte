@@ -27,6 +27,9 @@
     <svelte:fragment slot="navbar">
       <Placeholder text="Navbar" height="104px" />
     </svelte:fragment>
+    <svelte:fragment slot="control-panel">
+      <Placeholder text="Control Panel" height="150px" />
+    </svelte:fragment>
     <svelte:fragment slot="map">
       <Placeholder text="Node Map" height="350px" />
     </svelte:fragment>

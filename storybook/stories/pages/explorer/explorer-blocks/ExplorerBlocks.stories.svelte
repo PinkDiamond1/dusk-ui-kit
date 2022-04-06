@@ -1,11 +1,14 @@
 <script>
   import { Meta, Story } from "@storybook/addon-svelte-csf";
   // import { variants, states } from "@dusk-network/helpers";
-  import Template from "@dusk-network/explorer-list";
+  import Template from "@dusk-network/explorer-detail";
   // import results from "../../../../../.jest-test-results.json";
   // import { withTests } from "@storybook/addon-jest";
   import Navbar from "../_Navbar.svelte";
   import Footer from "../_Footer.svelte";
+  import Search from "../_Search.svelte";
+  import Card from "@dusk-network/card";
+  import Content from "@dusk-network/content";
   import Breadcrumb, { Item } from "@dusk-network/breadcrumb";
   import SkeletonLoader from "@dusk-network/skeleton-loader";
   import Icon from "@dusk-network/icon";
@@ -52,7 +55,14 @@
     <svelte:fragment slot="navbar">
       <Navbar />
     </svelte:fragment>
-    <svelte:fragment slot="list">
+    <svelte:fragment slot="detail-details">
+      <Card>
+        <Content>
+          <Search />
+        </Content>
+      </Card>
+    </svelte:fragment>
+    <svelte:fragment slot="detail-list">
       <Table data="{blocks}" settings="{blockSettings}" bind:dataRows="{blockRows}">
         <div slot="title">
           <Breadcrumb href="javascript:;" on:exit="{() => {}}">
