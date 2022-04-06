@@ -1,5 +1,14 @@
 # @dusk-network/chart
 
+## 5.0.5
+
+### Patch Changes
+
+- 8bd8843d: Release
+- Updated dependencies [8bd8843d]
+  - @dusk-network/helpers@5.0.5
+  - @dusk-network/heading@5.0.5
+
 ## 5.0.4
 
 ### Patch Changes
