@@ -1648,6 +1648,7 @@ packages:
 
   /@dusk-network/eslint-config/1.1.0_e2728f73c07115dc0f07f50574ec0eea:
     resolution: {integrity: sha512-phXcdrTvdkqHdaDwU99PG6osFsTjzfXmo+JtIl17FJzgPGX5mo6FeaEyNRSpZSOgpEQXGybFEgnLn9bCThTlxA==, tarball: download/@dusk-network/eslint-config/1.1.0/d68fcca9657753128dd26e08ee8c6b33db214d81c56884e763dcbadb321ca99d}
+    engines: {node: ^14.17.0}
     peerDependencies:
       eslint: ^8.6.0
       eslint-plugin-svelte3: ^3.4.0
