@@ -363,6 +363,14 @@
     & .duk-button-group {
       @apply mx-auto;
     }
+
+    .duk-infinite-scroll {
+      @apply mx-auto;
+
+      .duk-loading-indicator {
+        width: 3rem;
+      }
+    }
   }
 
   &__datum {

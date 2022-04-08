@@ -2,6 +2,7 @@
   import { onDestroy, setContext, getContext } from "svelte";
   import Pagination from "@dusk-network/pagination";
   import DropDown from "@dusk-network/drop-down";
+  import InfiniteScroll from "./infinite-scroll/InfiniteScroll.svelte";
   import contexts from "@dusk-network/helpers/contexts.js";
   import { getTable } from "./table.js";
   import { key } from "./key.js";
@@ -17,11 +18,6 @@
    * Sets the settings available in the Table.
    */
   export let settings = {};
-
-  /**
-   * Sets the number of columns of the Table Row, default is 12 columns but can be extended to 24.
-   */
-  export let gridType = "12";
 
   /**
    * Sets Table mobile breakpoint.
@@ -46,7 +42,6 @@
 
   setContext("DUK:drop-down:context", contexts.DROP_DOWN.TABLE);
   setContext("DUK:pagination:context", contexts.PAGINATION.TABLE);
-  setContext("DUK:datum:context", gridType);
 </script>
 
 <div id="{$id}" class="{$$props.class || ''} duk-table">
@@ -78,6 +73,17 @@
         on:pagination="{() => {
           columns.redraw();
           activeRow.set(null);
+        }}"
+      />
+    {/if}
+    <!-- {#if $options.infinite === true} -->
+    {#if $options.infinite === true}
+      <InfiniteScroll
+        pageNumber="{pageNumber}"
+        items="{data}"
+        itemsPerPage="{$options.rowsPerPage}"
+        on:infifnite="{() => {
+          columns.redraw();
         }}"
       />
     {/if}
