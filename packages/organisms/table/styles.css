@@ -389,6 +389,12 @@
     &--content {
       @apply flex gap-x-4;
     }
+
+    &--head {
+      ^&--content {
+        @apply items-center;
+      }
+    }
   }
 }
 @tailwind base;
