@@ -6,7 +6,7 @@
   const settings = {
     sortable: true,
     rowsPerPage: 10,
-    pagination: true,
+    infinite: true,
     limiter: true,
   };
 
