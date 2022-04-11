@@ -357,7 +357,7 @@
     @apply flex items-center justify-between py-2 px-5 mt-3 bg-white shadow-table rounded-tl-md rounded-tr-md rounded-bl-xl rounded-br-xl;
     @apply dark:bg-gray-700 dark:text-gray-100;
 
-    min-height: 2.5rem;
+    min-height: 3.25rem;
 
     & .duk-button-wrapper,
     & .duk-button-group {
@@ -365,10 +365,10 @@
     }
 
     .duk-infinite-scroll {
-      @apply mx-auto;
-
+      @apply mx-auto flex;
+      
       .duk-loading-indicator {
-        width: 3rem;
+        width: 2.5rem;
       }
     }
   }
