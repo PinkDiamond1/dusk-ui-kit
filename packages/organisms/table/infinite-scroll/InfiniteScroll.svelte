@@ -18,6 +18,11 @@
    */
   export let pageNumber = 1;
 
+  /**
+   * Sets the time duration for the simulated load
+   */
+  export let duration = 2000;
+
   export let variant = "brand";
 
   const dispatch = createEventDispatcher();
@@ -29,13 +34,13 @@
   };
 
   const simLoad = () => {
-      if(!loading){
-          loading = true;
-          setTimeout(() => {
-              nextPage($pageNumber+1);
-          }, 5000);
-      }
-  }
+    if (!loading) {
+      loading = true;
+      setTimeout(() => {
+        nextPage($pageNumber + 1);
+      }, duration);
+    }
+  };
 
   $: pageCount = Array.from(Array(Math.ceil(items.length / itemsPerPage)).keys());
 
@@ -43,25 +48,25 @@
   let loading = false;
 
   $: {
-      if(scrollY + 1 + window.innerHeight >= document.documentElement.scrollHeight && scrollY !== undefined){
-          if($pageNumber < pageCount.length && $pageNumber%3 !== 0) {
-              simLoad();
-          }
+    if (
+      scrollY + 1 + window.innerHeight >= document.documentElement.scrollHeight &&
+      scrollY !== undefined
+    ) {
+      if ($pageNumber < pageCount.length && $pageNumber % 3 !== 0) {
+        simLoad();
       }
+    }
   }
 </script>
 
-<svelte:window bind:scrollY={scrollY}/>
+<svelte:window bind:scrollY />
 
 <div class="{$$props.class || ''} duk-infinite-scroll">
-
   {#if loading}
-      <LoadingIndicator variant="{variant}"/>
+    <LoadingIndicator variant="{variant}" />
   {/if}
 
-  {#if $pageNumber%3 === 0 && !loading}
-      <Button on:click="{()=>simLoad()}">
-          Load More
-      </Button>
+  {#if $pageNumber % 3 === 0 && !loading}
+    <Button on:click="{() => simLoad()}">Load More</Button>
   {/if}
 </div>

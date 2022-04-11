@@ -24,6 +24,11 @@
    */
   export let mobileBreakpoint = "sm";
 
+  /**
+   * Sets the duration for the data load delay
+   */
+  export let duration = 2000;
+
   setContext(key, {});
   createContext();
 
@@ -65,6 +70,7 @@
   <div class="duk-table__actions">
     {#if $options.infinite === true}
       <InfiniteScroll
+        duration="{duration}"
         pageNumber="{pageNumber}"
         items="{data}"
         itemsPerPage="{$options.rowsPerPage}"
