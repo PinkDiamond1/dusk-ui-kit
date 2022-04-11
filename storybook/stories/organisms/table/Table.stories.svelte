@@ -9,10 +9,10 @@
   const settings = {
     sortable: true,
     rowsPerPage: 10,
-    pagination: true,
+    infinite: true,
     limiter: true,
   };
-
+  let duration = 3000;
   let rows;
 </script>
 
@@ -33,7 +33,7 @@
 
 <Story
   name="Kitchen sink example"
-  args="{{ data: data, settings: settings, mobileBreakpoint: 'lg' }}"
+  args="{{ data: data, settings: settings, mobileBreakpoint: 'lg', duration: duration }}"
   let:args
 >
   <Table
@@ -41,6 +41,7 @@
     bind:dataRows="{rows}"
     settings="{args.settings}"
     mobileBreakpoint="{args.mobileBreakpoint}"
+    duration="{args.duration}"
   >
     <h3 slot="title">Table title</h3>
     <thead slot="head">
