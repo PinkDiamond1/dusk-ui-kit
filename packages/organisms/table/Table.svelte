@@ -1,6 +1,5 @@
 <script>
   import { onDestroy, setContext, getContext } from "svelte";
-  import Pagination from "@dusk-network/pagination";
   import DropDown from "@dusk-network/drop-down";
   import InfiniteScroll from "./infinite-scroll/InfiniteScroll.svelte";
   import contexts from "@dusk-network/helpers/contexts.js";
@@ -63,20 +62,7 @@
     </table>
   </div>
 
-  <!-- {#if $$slots.actions || $options.pagination || $options.limiter} -->
   <div class="duk-table__actions">
-    {#if $options.pagination === true}
-      <Pagination
-        pageNumber="{pageNumber}"
-        items="{data}"
-        itemsPerPage="{$options.rowsPerPage}"
-        on:pagination="{() => {
-          columns.redraw();
-          activeRow.set(null);
-        }}"
-      />
-    {/if}
-    <!-- {#if $options.infinite === true} -->
     {#if $options.infinite === true}
       <InfiniteScroll
         pageNumber="{pageNumber}"
@@ -84,6 +70,7 @@
         itemsPerPage="{$options.rowsPerPage}"
         on:infifnite="{() => {
           columns.redraw();
+          activeRow.set(null);
         }}"
       />
     {/if}
@@ -101,5 +88,4 @@
       />
     {/if}
   </div>
-  <!-- {/if} -->
 </div>

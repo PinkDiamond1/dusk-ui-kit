@@ -21,14 +21,12 @@
     "@dusk-network/helpers": "workspace:*",
     "@dusk-network/icon": "workspace:*",
     "@dusk-network/loading-indicator": "workspace:*",
-    "@dusk-network/pagination": "workspace:*"
   },
   "peerDependencies": {
     "@dusk-network/drop-down": "workspace:*",
     "@dusk-network/helpers": "workspace:*",
     "@dusk-network/icon": "workspace:*",
     "@dusk-network/loading-indicator": "workspace:*",
-    "@dusk-network/pagination": "workspace:*"
   },
   "gitHead": "b7c5d57d638264700fedbaf5d7f77f7487008bd5",
   "svelte": "index.js"
