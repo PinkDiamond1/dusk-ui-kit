@@ -17,12 +17,14 @@
     "test": "echo \"Work in progress...\" && exit 1"
   },
   "devDependencies": {
+    "@dusk-network/button": "workspace:*",
     "@dusk-network/drop-down": "workspace:*",
     "@dusk-network/helpers": "workspace:*",
     "@dusk-network/icon": "workspace:*",
     "@dusk-network/loading-indicator": "workspace:*"
   },
   "peerDependencies": {
+    "@dusk-network/button": "workspace:*",
     "@dusk-network/drop-down": "workspace:*",
     "@dusk-network/helpers": "workspace:*",
     "@dusk-network/icon": "workspace:*",
