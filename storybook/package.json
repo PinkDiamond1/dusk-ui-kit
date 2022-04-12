@@ -38,6 +38,7 @@
     "@dusk-network/file-upload": "workspace:*",
     "@dusk-network/footer": "workspace:*",
     "@dusk-network/form": "workspace:*",
+    "@dusk-network/gauge": "workspace:*",
     "@dusk-network/group": "workspace:*",
     "@dusk-network/heading": "workspace:*",
     "@dusk-network/helpers": "workspace:*",
