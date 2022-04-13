@@ -3,9 +3,27 @@
   import { arc } from "d3-shape";
   import { scaleLinear } from "d3-scale";
   import { tweened } from "svelte/motion";
+
+  /**
+   * Sets the max value of the gauge.
+   */
   export let maxValue;
+
+  /**
+   * Sets the min value of the gauge.
+   */
   export let minValue;
+
+  /**
+   * Sets the value of the gauge.
+   */
   export let value;
+
+  /**
+   * Sets the width of the gauge. Default is auto. Any unit is permitted.
+   * If width is left on default the gauge must be put inside a container with a fixed width.
+   */
+  export let width = "auto";
 
   let state = {
     low: "#88B178",
@@ -28,23 +46,24 @@
     .clamp(true);
 
   $: angle = angleScale(percentage);
+  $: correctedAngle = correctAngle(angle);
 
   $: percentage, (fillColor = getState(percentage));
 
   let backgroundArc = arc()
-    .innerRadius(0.75)
+    .innerRadius(0.7)
     .outerRadius(0.95)
-    .startAngle(-Math.PI / 2)
-    .endAngle(Math.PI / 2)
+    .startAngle(-Math.PI / 2 + 0.1)
+    .endAngle(Math.PI / 2 - 0.1)
     .cornerRadius(1);
   $: filledArc = arc()
-    .innerRadius(0.765)
-    .outerRadius(0.935)
-    .startAngle(-Math.PI / 2 + 0.01)
-    .endAngle(angle)
+    .innerRadius(0.73)
+    .outerRadius(0.92)
+    .startAngle(-Math.PI / 2 + 0.135)
+    .endAngle(correctedAngle)
     .cornerRadius(1);
 
-  $: indicator.set(angle);
+  $: indicator.set(correctedAngle);
 
   const getState = () => {
     switch (true) {
@@ -56,11 +75,22 @@
         return state.high;
     }
   };
+
+  const correctAngle = (angle) => {
+    switch (true) {
+      case angle < 0:
+        return angle + 0.135;
+      case angle > 0:
+        return angle - 0.135;
+      case angle === 0:
+        return angle;
+    }
+  };
 </script>
 
 <div class="{$$props.class || ''} duk-gauge">
-  <svg viewBox="-1 -0.98 2 1" class="duk-gauge__circle">
-    <path d="{backgroundArc()}" fill="transparent" stroke-width="0.04px" stroke="#343434"></path>
+  <svg viewBox="-1 -0.98 2 1" style="{`width:${width}`}">
+    <path d="{backgroundArc()}" fill="transparent" stroke-width="0.06px" stroke="#343434"></path>
     <path style="{value === 0 ? 'visibility:hidden' : ''}" d="{filledArc()}" fill="{fillColor}"
     ></path>
   </svg>

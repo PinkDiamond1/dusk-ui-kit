@@ -1,17 +1,13 @@
 .duk-gauge {
-  @apply relative inline-block;
+  @apply relative flex;
 
   &__dial {
     @apply absolute;
     left: 50%;
-    bottom: 0;
+    bottom: -16.67%;
     transform: translateX(-50%);
-    transform-origin: center bottom;
-    width: 10em;
-    height: 5em;
-  }
-
-  &__circle {
-    width: 15em;
+    transform-origin: center 75%;
+    width: auto;
+    height: 62.5%;
   }
 }
