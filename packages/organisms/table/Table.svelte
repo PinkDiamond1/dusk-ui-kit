@@ -1,7 +1,7 @@
 <script>
   import { onDestroy, setContext, getContext } from "svelte";
   import DropDown from "@dusk-network/drop-down";
-  import InfiniteScroll from "./infinite-scroll/InfiniteScroll.svelte";
+  import InfiniteScroll from "./InfiniteScroll.svelte";
   import contexts from "@dusk-network/helpers/contexts.js";
   import { getTable } from "./table.js";
   import { key } from "./key.js";
