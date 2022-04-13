@@ -8,6 +8,7 @@
   let minValue = 0;
   let maxValue = 20;
   let value = 6;
+  let width = "200px";
 </script>
 
 <Meta
@@ -31,6 +32,7 @@
     minValue: minValue,
     maxValue: maxValue,
     value: value,
+    width: width,
   }}"
   let:args
 >
