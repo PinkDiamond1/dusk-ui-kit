@@ -21,9 +21,14 @@
 
   /**
    * Sets the width of the gauge. Default is auto. Any unit is permitted.
-   * If width is left on default the gauge must be put inside a container with a fixed width.
+   * If width is left on default the gauge must be wrapped in a container with a fixed width.
    */
   export let width = "auto";
+
+  /**
+   * Sets the Gauge to have a tooltip when true.
+   */
+  export let tooltip = false;
 
   let state = {
     low: "#88B178",
@@ -31,8 +36,8 @@
     high: "#D82E60",
   };
 
-  let indicator = tweened(0);
-  let fillColor;
+  let indicator = tweened(-1.44);
+  let fillColor, tooltipWidth;
 
   $: scale = scaleLinear()
     .domain([minValue || 0, maxValue])
@@ -57,9 +62,9 @@
     .endAngle(Math.PI / 2 - 0.1)
     .cornerRadius(1);
   $: filledArc = arc()
-    .innerRadius(0.73)
-    .outerRadius(0.92)
-    .startAngle(-Math.PI / 2 + 0.135)
+    .innerRadius(0.72)
+    .outerRadius(0.93)
+    .startAngle(-Math.PI / 2 + 0.13)
     .endAngle(correctedAngle)
     .cornerRadius(1);
 
@@ -79,9 +84,9 @@
   const correctAngle = (angle) => {
     switch (true) {
       case angle < 0:
-        return angle + 0.135;
+        return angle + 0.13;
       case angle > 0:
-        return angle - 0.135;
+        return angle - 0.13;
       case angle === 0:
         return angle;
     }
@@ -90,7 +95,7 @@
 
 <div class="{$$props.class || ''} duk-gauge">
   <svg viewBox="-1 -0.98 2 1" style="{`width:${width}`}">
-    <path d="{backgroundArc()}" fill="transparent" stroke-width="0.06px" stroke="#343434"></path>
+    <path d="{backgroundArc()}" fill="transparent" stroke-width="0.045px" stroke="#343434"></path>
     <path style="{value === 0 ? 'visibility:hidden' : ''}" d="{filledArc()}" fill="{fillColor}"
     ></path>
   </svg>
@@ -108,4 +113,14 @@
       fill="{fillColor}"
       stroke="#343434"></path>
   </svg>
+  {#if tooltip}
+    <div
+      bind:clientWidth="{tooltipWidth}"
+      class="duk-gauge__tooltip"
+      style="width:{tooltipWidth}px"
+    >
+      <p>Used: {value}</p>
+      <p>Limit: {maxValue}</p>
+    </div>
+  {/if}
 </div>
