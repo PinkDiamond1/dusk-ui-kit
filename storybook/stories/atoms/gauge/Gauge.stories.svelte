@@ -9,6 +9,7 @@
   let maxValue = 20;
   let value = 6;
   let width = "200px";
+  let tooltip = true;
 </script>
 
 <Meta
@@ -33,6 +34,7 @@
     maxValue: maxValue,
     value: value,
     width: width,
+    tooltip: tooltip,
   }}"
   let:args
 >
