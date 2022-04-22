@@ -21,7 +21,7 @@
 
   /**
    * Sets the width of the gauge. Default is auto. Any unit is permitted.
-   * If width is left on default the gauge must be wrapped in a container with a fixed width.
+   * If width is left on default the gauge will use all the available container space to display.
    */
   export let width = "auto";
 
@@ -93,8 +93,8 @@
   };
 </script>
 
-<div class="{$$props.class || ''} duk-gauge">
-  <svg viewBox="-1 -0.98 2 1" style="{`width:${width}`}">
+<div class="{$$props.class || ''} duk-gauge" style="{`width:${width}`}">
+  <svg viewBox="-1 -0.98 2 1">
     <path d="{backgroundArc()}" fill="transparent" stroke-width="0.045px" stroke="#343434"></path>
     <path style="{value === 0 ? 'visibility:hidden' : ''}" d="{filledArc()}" fill="{fillColor}"
     ></path>
