@@ -50,7 +50,7 @@
       @apply lg:space-x-5 lg:mt-0 lg:items-end;
 
       @media (display-mode: standalone) {
-        @apply hidden;
+        visibility: hidden;
       }
 
       & .duk-menu__list {
