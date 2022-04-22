@@ -120,7 +120,7 @@ const config = {
         target: ["es2020"],
       },
       optimizeDeps: {
-        include: ["highlight.js/lib/core"],
+        include: ["highlight.js", "highlight.js/lib/core"],
         exclude: ["fsevents", "purgecss", "rollup-pluginutils"],
       },
       resolve: {
