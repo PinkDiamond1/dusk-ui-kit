@@ -48,6 +48,8 @@
       selectOption(selectedOption);
     }
   });
+
+  $: selectedIndex, (selectedOption = options[selectedIndex]);
 </script>
 
 <div
