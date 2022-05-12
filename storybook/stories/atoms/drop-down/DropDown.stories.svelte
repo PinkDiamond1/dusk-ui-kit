@@ -43,6 +43,22 @@
   <DropDown {...args} on:select="{args.onSelect}" />
 </Story>
 
+<Story
+  name="Using array of objects"
+  args="{{
+    options: [
+      { name: 'option 1' },
+      { name: 'option 2' },
+      { name: 'option 3' },
+      { name: 'option 4' },
+      { name: 'option 5' },
+    ],
+  }}"
+  let:args
+>
+  <DropDown {...args} on:select="{args.onSelect}" />
+</Story>
+
 <Story name="No options" args="{{ options: [] }}" let:args>
   <DropDown {...args} on:select="{args.onSelect}" />
 </Story>
