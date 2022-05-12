@@ -61,7 +61,11 @@
   <div class="duk-drop-down__layout">
     <button type="button" class="duk-drop-down__button" on:click="{() => (isOpen = !isOpen)}">
       <span class="duk-drop-down__selected">
-        <span class="duk-drop-down__selected-label">{selectedOption}</span>
+        {#if typeof selectedOption !== "object"}
+          <span class="duk-drop-down__selected-label">{selectedOption}</span>
+        {:else}
+          <span class="duk-drop-down__selected-label">{selectedOption.name}</span>
+        {/if}
       </span>
       <span class="duk-drop-down__button-icon" class:duk-drop-down__button-icon--open="{isOpen}">
         <Icon name="menu-down-outline" />
@@ -83,11 +87,19 @@
               on:click="{() => selectOption(option)}"
             >
               <div class="duk-drop-down__item-layout">
-                <span
-                  class="duk-drop-down__item-label"
-                  class:duk-drop-down__item-label--selected="{option === selectedOption}"
-                  >{option}</span
-                >
+                {#if typeof option !== "object"}
+                  <span
+                    class="duk-drop-down__item-label"
+                    class:duk-drop-down__item-label--selected="{option === selectedOption}"
+                    >{option}</span
+                  >
+                {:else}
+                  <span
+                    class="duk-drop-down__item-label"
+                    class:duk-drop-down__item-label--selected="{option.name ===
+                      selectedOption.name}">{option.name}</span
+                  >
+                {/if}
               </div>
             </li>
           {/each}
