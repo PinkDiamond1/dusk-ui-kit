@@ -47,7 +47,7 @@
 
     &--primary {
       @apply mt-4;
-      @apply lg:space-x-5 lg:mt-0 lg:items-end;
+      @apply lg:space-x-5 lg:mt-0 lg:!items-end;
 
       @media (display-mode: standalone) {
         visibility: hidden;
