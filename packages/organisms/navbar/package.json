@@ -12,12 +12,13 @@
   },
   "type": "module",
   "main": "index.js",
+  "svelte": "index.js",
   "module": "index.js",
   "scripts": {
     "test": "echo \"Work in progress...\" && exit 1"
   },
   "dependencies": {
-    "svelte-dark-mode": "^2.0.0"
+    "svelte-dark-mode": "^2.1.0"
   },
   "devDependencies": {
     "@dusk-network/button": "workspace:*",
@@ -35,6 +36,5 @@
     "@dusk-network/menu": "workspace:*",
     "@dusk-network/toggle": "workspace:*"
   },
-  "gitHead": "f83d00502f80fe94d6c04b263a69240e8349f424",
-  "svelte": "index.js"
+  "gitHead": "f83d00502f80fe94d6c04b263a69240e8349f424"
 }

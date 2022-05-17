@@ -12,12 +12,13 @@
   },
   "type": "module",
   "main": "index.js",
+  "svelte": "index.js",
   "module": "index.js",
   "scripts": {
     "test": "echo \"Work in progress...\" && exit 1"
   },
   "dependencies": {
-    "check-password-strength": "^2.0.3"
+    "check-password-strength": "^2.0.5"
   },
   "devDependencies": {
     "@dusk-network/helpers": "workspace:*",
@@ -27,6 +28,5 @@
     "@dusk-network/helpers": "workspace:*",
     "@dusk-network/progress-bar": "workspace:*"
   },
-  "gitHead": "f83d00502f80fe94d6c04b263a69240e8349f424",
-  "svelte": "index.js"
+  "gitHead": "f83d00502f80fe94d6c04b263a69240e8349f424"
 }

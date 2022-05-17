@@ -15,12 +15,13 @@
   },
   "type": "module",
   "main": "index.js",
+  "svelte": "index.js",
   "module": "index.js",
   "scripts": {
     "test": "echo \"Work in progress...\" && exit 1"
   },
   "dependencies": {
-    "marked": "^4.0.10"
+    "marked": "^4.0.16"
   },
   "devDependencies": {
     "@dusk-network/helpers": "workspace:*"
@@ -28,6 +29,5 @@
   "peerDependencies": {
     "@dusk-network/helpers": "workspace:*"
   },
-  "gitHead": "f83d00502f80fe94d6c04b263a69240e8349f424",
-  "svelte": "index.js"
+  "gitHead": "f83d00502f80fe94d6c04b263a69240e8349f424"
 }

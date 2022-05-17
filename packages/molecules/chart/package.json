@@ -12,6 +12,7 @@
   },
   "type": "module",
   "main": "index.js",
+  "svelte": "index.js",
   "module": "index.js",
   "scripts": {
     "test": "echo \"Work in progress...\" && exit 1"
@@ -19,11 +20,11 @@
   "dependencies": {
     "d3-geo": "^3.0.1",
     "d3-quadtree": "^3.0.1",
-    "d3-scale": "^4.0.1",
+    "d3-scale": "^4.0.2",
     "d3-tile": "^1.0.0",
     "d3-zoom": "^3.0.0",
-    "layercake": "^5.0.3",
-    "svelte-i18n": "^3.3.13",
+    "layercake": "^6.1.0",
+    "svelte-i18n": "^3.4.0",
     "topojson-client": "^3.1.0"
   },
   "devDependencies": {
@@ -34,6 +35,5 @@
     "@dusk-network/heading": "workspace:*",
     "@dusk-network/helpers": "workspace:*"
   },
-  "gitHead": "f83d00502f80fe94d6c04b263a69240e8349f424",
-  "svelte": "index.js"
+  "gitHead": "f83d00502f80fe94d6c04b263a69240e8349f424"
 }
