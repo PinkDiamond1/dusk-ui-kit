@@ -1,21 +1,6 @@
-# Dusk UI Kit - Organism - Table
-
-[![Storybook](https://img.shields.io/badge/Storybook-Component_Playground-%23FF4785?style=flat&logo=storybook)](https://dusk-network.github.io/dusk-ui-kit/?path=/story/components-atoms-table)
-[![Docs](https://img.shields.io/badge/Documentation-%235E35CF?style=flat)](https://dusk-network.github.io/dusk-ui-kit/docs/components/atoms/table)
-
-## Installation
-
-```
-npm i -D @dusk-network/table
-```
-
-## Usage
-
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../../examples/src/organisms/table/Table_01.svelte) -->
-<!-- The below code snippet is automatically added from ../../../examples/src/organisms/table/Table_01.svelte -->
-```svelte
 <script>
   import Table, { Row, Datum } from "@dusk-network/table";
+  import Icon from "@dusk-network/icon";
   import { useQuery } from "@sveltestack/svelte-query";
   import { apiData } from "./data.js";
 
@@ -51,10 +36,14 @@ npm i -D @dusk-network/table
       {#if rows}
         {#each $rows as _}
           <Row type="head">
-            <Datum key="id">ID</Datum>
+            <Datum key="id">
+              <Icon name="key-outline" />
+              ID</Datum
+            >
             <Datum key="first_name">Status</Datum>
             <Datum key="last_name">Time</Datum>
             <Datum key="email">Amount</Datum>
+            <Datum hidden="{true}" />
           </Row>
         {/each}
       {/if}
@@ -74,10 +63,13 @@ npm i -D @dusk-network/table
               {row.amount}
             </Datum>
           </Row>
+          <Row hidden="{true}">
+            <Datum colspan="4">
+              <p>Extra information</p>
+            </Datum>
+          </Row>
         {/each}
       {/if}
     </tbody>
   </Table>
 {/if}
-```
-<!-- MARKDOWN-AUTO-DOCS:END -->

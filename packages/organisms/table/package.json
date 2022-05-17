@@ -17,16 +17,18 @@
     "test": "echo \"Work in progress...\" && exit 1"
   },
   "devDependencies": {
+    "@dusk-network/button": "workspace:*",
     "@dusk-network/drop-down": "workspace:*",
     "@dusk-network/helpers": "workspace:*",
     "@dusk-network/icon": "workspace:*",
-    "@dusk-network/pagination": "workspace:*"
+    "@dusk-network/loading-indicator": "workspace:*"
   },
   "peerDependencies": {
+    "@dusk-network/button": "workspace:*",
     "@dusk-network/drop-down": "workspace:*",
     "@dusk-network/helpers": "workspace:*",
     "@dusk-network/icon": "workspace:*",
-    "@dusk-network/pagination": "workspace:*"
+    "@dusk-network/loading-indicator": "workspace:*"
   },
   "gitHead": "f83d00502f80fe94d6c04b263a69240e8349f424",
   "svelte": "index.js"

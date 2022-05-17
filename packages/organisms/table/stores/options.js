@@ -6,10 +6,10 @@ const getOptions = () => {
   const createOptions = () => {
     const { subscribe, set } = writable({
       sortable: true,
-      pagination: true,
       limiter: false,
       rowsPerPage: 20,
       columnFilter: false,
+      infinite: false,
     });
     return {
       subscribe,
@@ -22,10 +22,10 @@ const getOptions = () => {
       update: (opt) => {
         const parsed = {
           sortable: typeof opt.sortable === "boolean" ? opt.sortable : true,
-          pagination: typeof opt.pagination === "boolean" ? opt.pagination : true,
           limiter: typeof opt.limiter === "boolean" ? opt.limiter : false,
           rowsPerPage: typeof opt.rowsPerPage === "number" ? opt.rowsPerPage : 20,
           columnFilter: typeof opt.columnFilter === "boolean" ? opt.columnFilter : false,
+          infinite: typeof opt.infinite === "boolean" ? opt.infinite : false,
         };
         options.set(parsed);
       },
