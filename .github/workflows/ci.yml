@@ -26,7 +26,7 @@ jobs:
       - name: Recreate .npmrc
         run: |
           cat << EOF > "$HOME/.npmrc"
-            //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN} @dusk-network:registry=https://npm.pkg.github.com node-linker=hoisted shamefully-hoist=true
+            //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN} @dusk-network:registry=https://npm.pkg.github.com node-linker=hoisted shamefully-hoist=true strict-peer-dependencies=false
           EOF
         env:
           GITHUB_TOKEN: ${{secrets.GH_PACKAGES_TOKEN}}
