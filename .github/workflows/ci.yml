@@ -14,14 +14,15 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: "17.3.1"
           registry-url: "https://npm.pkg.github.com/"
           scope: "@dusk-network"
 
-      - name: Install pnpm
-        run: npm i pnpm@latest -g
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
 
       - name: Recreate .npmrc
         run: |
@@ -32,7 +33,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GH_PACKAGES_TOKEN}}
 
       - name: Install Dependencies
-        run: pnpm i -r
+        run: pnpm i --frozen-lockfile
         env:
           GITHUB_TOKEN: ${{secrets.GH_PACKAGES_TOKEN}}
 
