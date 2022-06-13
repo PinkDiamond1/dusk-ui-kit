@@ -29,15 +29,15 @@ jobs:
       - name: Recreate .npmrc
         run: |
           cat << EOF > "$HOME/.npmrc"
-            //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN} @dusk-network:registry=https://npm.pkg.github.com node-linker=hoisted shamefully-hoist=true strict-peer-dependencies=false
+            //npm.pkg.github.com/:_authToken=${REGISTRY_TOKEN} @dusk-network:registry=https://npm.pkg.github.com node-linker=hoisted shamefully-hoist=true strict-peer-dependencies=false
           EOF
         env:
-          GITHUB_TOKEN: ${{secrets.GH_PACKAGES_TOKEN}}
+          REGISTRY_TOKEN: ${{secrets.REGISTRY_TOKEN}}
 
       - name: Install Dependencies
         run: pnpm i --frozen-lockfile
         env:
-          GITHUB_TOKEN: ${{secrets.GH_PACKAGES_TOKEN}}
+          REGISTRY_TOKEN: ${{secrets.REGISTRY_TOKEN}}
 
       - name: Create Release Pull Request or Publish
         id: changesets
