@@ -7,8 +7,6 @@
     "start": "start-storybook -p 6006 --modern"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.12",
-    "@babel/preset-env": "^7.17.12",
     "@dusk-network/accordion": "workspace:*",
     "@dusk-network/address": "workspace:*",
     "@dusk-network/alert": "workspace:*",
