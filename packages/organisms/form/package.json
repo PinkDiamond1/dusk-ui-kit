@@ -12,6 +12,7 @@
   },
   "type": "module",
   "main": "index.js",
+  "svelte": "index.js",
   "module": "index.js",
   "scripts": {
     "test": "echo \"Work in progress...\" && exit 1"
@@ -24,6 +25,5 @@
     "@dusk-network/helpers": "workspace:*",
     "@dusk-network/icon": "workspace:*"
   },
-  "gitHead": "f83d00502f80fe94d6c04b263a69240e8349f424",
-  "svelte": "index.js"
+  "gitHead": "c89a9db807894d039d9dde5fda2012489fa4ccf8"
 }
