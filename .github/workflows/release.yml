@@ -90,12 +90,6 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Codecov
-        uses: codecov/codecov-action@v2
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          flags: unittests
-
       - name: Update READMEs
         uses: dineshsonachalam/markdown-autodocs@v1.0.4
         with:
