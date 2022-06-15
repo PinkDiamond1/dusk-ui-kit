@@ -37,3 +37,10 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           flags: unittests
+
+      - name: Update READMEs
+        uses: dineshsonachalam/markdown-autodocs@v1.0.4
+        with:
+          output_file_paths: "[./packages/atoms/drop-down/README.md, ./packages/atoms/icon/README.md, ./packages/atoms/loading-indicator/README.md, ./packages/atoms/logo/README.md, ./packages/atoms/progress-bar/README.md, ./packages/atoms/rich-text/README.md, ./packages/atoms/text-field/README.md, ./packages/atoms/toggle/README.md, ./packages/helpers/README.md, ./packages/molecules/alert/README.md, ./packages/molecules/breadcrumb/README.md, ./packages/molecules/button/README.md, ./packages/molecules/control/README.md, ./packages/molecules/cta-list/README.md, ./packages/molecules/disclaimer-list/README.md, ./packages/molecules/file-upload/README.md, ./packages/molecules/heading/README.md, ./packages/molecules/menu/README.md, ./packages/molecules/mnemonic/README.md, ./packages/molecules/pagination/README.md, ./packages/molecules/password-strength/README.md, ./packages/organisms/accordion/README.md, ./packages/organisms/card/README.md, ./packages/organisms/cookie-banner/README.md, ./packages/organisms/footer/README.md, ./packages/organisms/form/README.md, ./packages/organisms/hero/README.md, ./packages/organisms/navbar/README.md, ./packages/organisms/search-list/README.md, ./packages/organisms/table/README.md, ./packages/organisms/wizard/README.md]"
+          commit_message: "🤖 (auto-commit) updating README files"
+          categories: "[code-block]"
