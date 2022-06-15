@@ -1,7 +1,7 @@
 <script>
   import { onDestroy, setContext, getContext } from "svelte";
-  import Pagination from "@dusk-network/pagination";
   import DropDown from "@dusk-network/drop-down";
+  import InfiniteScroll from "./InfiniteScroll.svelte";
   import contexts from "@dusk-network/helpers/contexts.js";
   import { getTable } from "./table.js";
   import { key } from "./key.js";
@@ -19,15 +19,15 @@
   export let settings = {};
 
   /**
-   * Sets the number of columns of the Table Row, default is 12 columns but can be extended to 24.
+   * Sets Table mobile breakpoint.
+   * @type { "sm" | "md" | "lg" | "xl" | "xxl" }
    */
-  export let gridType = "12";
+  export let mobileBreakpoint = "sm";
 
   /**
-   * Sets Table overflow property to `scroll` dependent on the screen width breakpoint.
-   * @type { "sm" | "lg" | "xl" | "xxl" }
+   * Sets the duration for the data load delay
    */
-  export let overflowBreakpoint = "md";
+  export let duration = 2000;
 
   setContext(key, {});
   createContext();
@@ -46,34 +46,35 @@
 
   setContext("DUK:drop-down:context", contexts.DROP_DOWN.TABLE);
   setContext("DUK:pagination:context", contexts.PAGINATION.TABLE);
-  setContext("DUK:datum:context", gridType);
 </script>
 
 <div id="{$id}" class="{$$props.class || ''} duk-table">
   <div class="duk-table__title">
     <slot name="title" />
   </div>
-  <table
-    class="duk-table__table"
-    class:duk-table__table--extended="{gridType === '24'}"
-    class:duk-table__table--sm="{overflowBreakpoint === 'sm'}"
-    class:duk-table__table--md="{overflowBreakpoint === 'md'}"
-    class:duk-table__table--lg="{overflowBreakpoint === 'lg'}"
-    class:duk-table__table--xl="{overflowBreakpoint === 'xl'}"
-    class:duk-table__table--xxl="{overflowBreakpoint === 'xxl'}"
-  >
-    <slot name="head" />
-    <slot />
-    <slot name="foot" />
-  </table>
-  <!-- {#if $$slots.actions || $options.pagination || $options.limiter} -->
+  <div class="duk-table__wrapper">
+    <table
+      class="duk-table__table"
+      class:duk-table__table--sm="{mobileBreakpoint === 'sm'}"
+      class:duk-table__table--md="{mobileBreakpoint === 'md'}"
+      class:duk-table__table--lg="{mobileBreakpoint === 'lg'}"
+      class:duk-table__table--xl="{mobileBreakpoint === 'xl'}"
+      class:duk-table__table--xxl="{mobileBreakpoint === 'xxl'}"
+    >
+      <slot name="head" />
+      <slot />
+      <slot name="foot" />
+    </table>
+  </div>
+
   <div class="duk-table__actions">
-    {#if $options.pagination === true}
-      <Pagination
+    {#if $options.infinite === true}
+      <InfiniteScroll
+        duration="{duration}"
         pageNumber="{pageNumber}"
         items="{data}"
         itemsPerPage="{$options.rowsPerPage}"
-        on:pagination="{() => {
+        on:infifnite="{() => {
           columns.redraw();
           activeRow.set(null);
         }}"
@@ -93,5 +94,4 @@
       />
     {/if}
   </div>
-  <!-- {/if} -->
 </div>

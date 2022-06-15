@@ -1,8 +1,8 @@
 .duk-file-upload {
   @apply container;
   &__dropzone {
-    @apply relative rounded-2xl border-2 border-dashed border-indigo-500 text-center h-40 w-full  mt-8 mb-12;
-    @apply sm:rounded-md sm:h-48;
+    @apply relative rounded-2xl border-2 border-dashed border-indigo-500 text-center h-56 w-full  mt-8 mb-12;
+    @apply sm:rounded-md sm:h-64;
 
     ^&__input {
       @apply absolute cursor-pointer opacity-0 top-0 right-0 bottom-0 left-0 w-full;

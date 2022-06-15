@@ -1,25 +1,13 @@
 .duk-media-content {
-  @apply inline-flex flex-col w-full;
-  @apply lg:flex-row lg:gap-x-5;
+  @apply inline-flex flex-col w-full gap-y-10;
+  @apply lg:flex-row lg:gap-x-5 lg:gap-y-0;
 
   &__media {
-    @apply flex-1;
+    @apply flex-1 w-fit;
 
     > * {
       @apply mr-auto;
     }
-  }
-
-  &--wmax {
-    @apply w-max;
-  }
-
-  &--wmin {
-    @apply w-min;
-  }
-
-  &--wfit {
-    @apply w-fit;
   }
 
   &__text {
@@ -46,7 +34,8 @@
   &--left {
     ^&__media {
       & > * {
-        @apply mr-auto;
+        @apply mx-auto;
+        @apply lg:mr-auto;
       }
     }
     ^&__text {
@@ -72,7 +61,8 @@
   &--right {
     ^&__media {
       & > * {
-        @apply ml-auto;
+        @apply mx-auto;
+        @apply lg:ml-auto;
       }
     }
     ^&__text {

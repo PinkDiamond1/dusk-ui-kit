@@ -5,6 +5,7 @@
   import { key } from "./key.js";
 
   export let type = null;
+  export let hidden = false;
   export let variant = variants.TABLE.DEFAULT;
   export let id = "__DUK-table-row" + Math.random().toString(36);
 
@@ -27,6 +28,7 @@
   class:duk-table__row--warning="{variant === variants.TABLE.WARNING}"
   class:duk-table__row--danger="{variant === variants.TABLE.DANGER}"
   class:duk-table__row--active="{$activeRow === id}"
+  class:duk-table__row--hidden="{hidden}"
   id="{id}"
 >
   <slot />

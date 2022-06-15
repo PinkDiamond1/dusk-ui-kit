@@ -1,6 +1,7 @@
 import * as Address from "./address";
 import * as Chip from "./chip";
 import * as DropDown from "./drop-down";
+import * as Gauge from "./gauge";
 import * as LoadingIndicator from "./loading-indicator";
 import * as TextField from "./text-field";
 import * as Icon from "./icon";
@@ -17,6 +18,7 @@ export {
   Address,
   Chip,
   DropDown,
+  Gauge,
   LoadingIndicator,
   TextField,
   Icon,

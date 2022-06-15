@@ -1,0 +1,25 @@
+{
+  "name": "@dusk-network/gauge",
+  "version": "0.0.0",
+  "description": "Dusk UI Kit - Gauge",
+  "bugs": {
+    "url": "https://github.com/dusk-network/dusk-ui-kit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dusk-network/dusk-ui-kit.git",
+    "directory": "packages/atoms/gauge"
+  },
+  "type": "module",
+  "main": "index.js",
+  "svelte": "index.js",
+  "module": "index.js",
+  "scripts": {
+    "test": "echo \"Work in progress...\" && exit 1"
+  },
+  "dependencies": {
+    "d3-scale": "^4.0.2",
+    "d3-shape": "^3.1.0"
+  },
+  "gitHead": "c89a9db807894d039d9dde5fda2012489fa4ccf8"
+}

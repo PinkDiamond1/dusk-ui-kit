@@ -1,0 +1,7 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@dusk-network/default': workspace:*
+
+devDependencies:
+  '@dusk-network/default': link:../default

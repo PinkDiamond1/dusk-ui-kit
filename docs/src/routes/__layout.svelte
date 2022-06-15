@@ -23,7 +23,7 @@
   import "./styles.css";
   import { QueryClient, QueryClientProvider } from "@sveltestack/svelte-query";
   import "@dusk-network/styles/tailwind.css";
-  import "svelte-highlight/src/styles/github-dark.css";
+  import "svelte-highlight/styles/github-dark.css";
   import Nav from "$lib/Nav.svelte";
   import Template from "@dusk-network/default";
   import Footer from "@dusk-network/footer";

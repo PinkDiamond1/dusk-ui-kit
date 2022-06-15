@@ -18,10 +18,7 @@
     </RichText>
   </svelte:fragment>
   <svelte:fragment slot="media">
-    <img
-      src="https://content.dusk.network/uploads/labs_explorer_7924404b8f.svg"
-      alt="labs explorer"
-    />
+    <img src="https://content.dusk.network/uploads/wallet_109fda512d.png" alt="labs explorer" />
   </svelte:fragment>
 </MediaContent>
 
@@ -39,9 +36,6 @@
     </RichText>
   </svelte:fragment>
   <svelte:fragment slot="media">
-    <img
-      src="https://content.dusk.network/uploads/labs_explorer_7924404b8f.svg"
-      alt="labs explorer"
-    />
+    <img src="https://content.dusk.network/uploads/wallet_109fda512d.png" alt="labs explorer" />
   </svelte:fragment>
 </MediaContent>

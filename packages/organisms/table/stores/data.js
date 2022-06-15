@@ -79,13 +79,10 @@ function getData() {
   );
 
   const rows = derived([filtered, options, pageNumber], ([$filtered, $options, $pageNumber]) => {
-    if (!$options.pagination) {
+    if (!$options.infinite) {
       return $filtered;
     }
-    return $filtered.slice(
-      ($pageNumber - 1) * $options.rowsPerPage,
-      $pageNumber * $options.rowsPerPage,
-    );
+    return $filtered.slice(0, $pageNumber * $options.rowsPerPage);
   });
 
   return { data, filtered, rows };

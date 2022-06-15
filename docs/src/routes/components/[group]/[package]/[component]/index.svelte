@@ -18,6 +18,8 @@
   import { Highlight } from "svelte-highlight";
   import RichText from "@dusk-network/rich-text";
   import { page } from "$app/stores";
+  import { javascript } from "svelte-highlight/languages";
+  import "svelte-highlight/styles/mellow-purple.css";
 
   export let meta;
   export let Examples;
@@ -100,7 +102,7 @@
     <div class="my-10">
       <svelte:component this="{example[1]}" />
     </div>
-    <Highlight class="mb-10" code="{sources[example[0]]}" />
+    <Highlight class="mb-10" language="{javascript}" code="{sources[example[0]]}" />
   {/each}
 {:else}
   <RichText class="w-full max-w-full mb-10">

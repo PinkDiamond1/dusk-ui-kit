@@ -1,0 +1,11 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@dusk-network/helpers': workspace:*
+  '@dusk-network/icon': workspace:*
+  '@dusk-network/rich-text': workspace:*
+
+devDependencies:
+  '@dusk-network/helpers': link:../../helpers
+  '@dusk-network/icon': link:../../atoms/icon
+  '@dusk-network/rich-text': link:../../atoms/rich-text
