@@ -16,7 +16,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version: "17.3.1"
+          node-version-file: ".nvmrc"
+          cache: "pnpm"
           registry-url: "https://npm.pkg.github.com/"
           scope: "@dusk-network"
 
@@ -24,16 +25,10 @@ jobs:
         with:
           version: 7
 
-      - name: Recreate .npmrc
-        run: |
-          cat << EOF > "$HOME/.npmrc"
-            //npm.pkg.github.com/:_authToken=${REGISTRY_TOKEN} @dusk-network:registry=https://npm.pkg.github.com node-linker=hoisted shamefully-hoist=true strict-peer-dependencies=false
-          EOF
-        env:
-          REGISTRY_TOKEN: ${{secrets.REGISTRY_TOKEN}}
-
       - name: Install Dependencies
         run: pnpm i -r --frozen-lockfile
+        env:
+          REGISTRY_TOKEN: ${{secrets.REGISTRY_TOKEN}}
 
       - name: Run tests
         run: pnpm test
