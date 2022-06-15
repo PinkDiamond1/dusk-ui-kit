@@ -114,7 +114,6 @@ const config = {
       base: dev ? "" : "/dusk-ui-kit/docs",
     },
     appDir: "internal", // Needed to work with Github pages.
-    target: "#dusk",
     vite: () => ({
       build: {
         target: ["es2020"],
