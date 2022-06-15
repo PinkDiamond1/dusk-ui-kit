@@ -33,9 +33,7 @@ jobs:
           REGISTRY_TOKEN: ${{secrets.REGISTRY_TOKEN}}
 
       - name: Install Dependencies
-        run: pnpm i --frozen-lockfile
-        env:
-          REGISTRY_TOKEN: ${{secrets.REGISTRY_TOKEN}}
+        run: pnpm i -r --frozen-lockfile
 
       - name: Run tests
         run: pnpm test
