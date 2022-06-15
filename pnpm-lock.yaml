@@ -5,7 +5,7 @@ specifiers:
   '@babel/preset-env': ^7.17.12
   '@changesets/cli': ^2.22.0
   '@commitlint/cli': ^17.0.0
-  '@dusk-network/eslint-config': 1.2.1
+  '@dusk-network/eslint-config': 1.2.2
   '@storybook/addon-jest': ^6.5.0-rc.0
   '@testing-library/jest-dom': ^5.16.4
   '@testing-library/svelte': ^3.1.1
@@ -48,7 +48,7 @@ devDependencies:
   '@babel/preset-env': 7.18.2_@babel+core@7.18.5
   '@changesets/cli': 2.23.0
   '@commitlint/cli': 17.0.2
-  '@dusk-network/eslint-config': 1.2.1_7le3puzwzesdp22d6vdzc4zdaa
+  '@dusk-network/eslint-config': 1.2.2_7le3puzwzesdp22d6vdzc4zdaa
   '@storybook/addon-jest': 6.5.9
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/svelte': 3.1.3_svelte@3.48.0
@@ -1607,13 +1607,12 @@ packages:
       postcss-selector-parser: 6.0.10
     dev: true
 
-  /@dusk-network/eslint-config/1.2.1_7le3puzwzesdp22d6vdzc4zdaa:
-    resolution: {integrity: sha512-Be4pQGl6IvUuA+0yaV8VbZcouvIILvrZzTjJyBbuKzliCMzqBbMNT2w/oFHuQujlxoSlhYJMihCz1tMDom1FhQ==, tarball: download/@dusk-network/eslint-config/1.2.1/2faea4d8de059c83243a3c4665da60303e2a2068d1d75740ea263aeaa5dff6bf}
-    engines: {node: ^14.17.0}
+  /@dusk-network/eslint-config/1.2.2_7le3puzwzesdp22d6vdzc4zdaa:
+    resolution: {integrity: sha512-OSdAmR4lHCnC6rBGuK1OFPOcsZcquXiU/lYzSLaDBTh/ZoZG8HJC/A2LC0fxxRhSFn3piI047IaQXMJr2RJ0yQ==, tarball: download/@dusk-network/eslint-config/1.2.2/aa6cbec23bb020ea2c289768b398a65a21148103f2fea8893e17be26ada1b76d}
     peerDependencies:
-      eslint: ^8.15.0
+      eslint: ^8.17.0
       eslint-plugin-svelte3: ^4.0.0
-      eslint-plugin-tailwindcss: ^3.5.0
+      eslint-plugin-tailwindcss: ^3.5.2
       svelte: ^3.48.0
     dependencies:
       eslint: 8.17.0
