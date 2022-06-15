@@ -28,14 +28,9 @@ jobs:
         with:
           version: 7
 
-      - name: Install Dependencies
-        run: pnpm i -r --frozen-lockfile
-        env:
-          REGISTRY_TOKEN: ${{secrets.REGISTRY_TOKEN}}
-
       - name: Create Release Pull Request or Publish
         id: changesets
-        uses: changesets/action@master
+        uses: changesets/action@v1
         with:
           version: pnpm version:ci
           commit: ":robot: (auto-commit) update package versions"
