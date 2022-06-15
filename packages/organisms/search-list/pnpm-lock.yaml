@@ -1,0 +1,17 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@dusk-network/button': workspace:*
+  '@dusk-network/control': workspace:*
+  '@dusk-network/helpers': workspace:*
+  '@dusk-network/icon': workspace:*
+  '@dusk-network/rich-text': workspace:*
+  '@dusk-network/text-field': workspace:*
+
+devDependencies:
+  '@dusk-network/button': link:../../molecules/button
+  '@dusk-network/control': link:../../molecules/control
+  '@dusk-network/helpers': link:../../helpers
+  '@dusk-network/icon': link:../../atoms/icon
+  '@dusk-network/rich-text': link:../../atoms/rich-text
+  '@dusk-network/text-field': link:../../atoms/text-field

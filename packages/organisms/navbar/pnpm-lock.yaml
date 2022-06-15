@@ -1,0 +1,27 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@dusk-network/button': workspace:*
+  '@dusk-network/helpers': workspace:*
+  '@dusk-network/icon': workspace:*
+  '@dusk-network/logo': workspace:*
+  '@dusk-network/menu': workspace:*
+  '@dusk-network/toggle': workspace:*
+  svelte-dark-mode: ^2.1.0
+
+dependencies:
+  svelte-dark-mode: 2.1.0
+
+devDependencies:
+  '@dusk-network/button': link:../../molecules/button
+  '@dusk-network/helpers': link:../../helpers
+  '@dusk-network/icon': link:../../atoms/icon
+  '@dusk-network/logo': link:../../atoms/logo
+  '@dusk-network/menu': link:../../molecules/menu
+  '@dusk-network/toggle': link:../../atoms/toggle
+
+packages:
+
+  /svelte-dark-mode/2.1.0:
+    resolution: {integrity: sha512-/QmIqWGwzcfE82FAMuHBlKFwudW7Vcos60Ii8j/mJZ0H6kGAXwL5EGlcc8voBJMJv/i0QZmhp5b1ZX/XKg9NJQ==}
+    dev: false

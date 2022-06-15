@@ -1,0 +1,7 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@dusk-network/helpers': workspace:*
+
+devDependencies:
+  '@dusk-network/helpers': link:../../helpers

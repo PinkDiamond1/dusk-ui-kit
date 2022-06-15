@@ -1,0 +1,19 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@dusk-network/helpers': workspace:*
+  '@dusk-network/progress-bar': workspace:*
+  check-password-strength: ^2.0.5
+
+dependencies:
+  check-password-strength: 2.0.5
+
+devDependencies:
+  '@dusk-network/helpers': link:../../helpers
+  '@dusk-network/progress-bar': link:../../atoms/progress-bar
+
+packages:
+
+  /check-password-strength/2.0.5:
+    resolution: {integrity: sha512-b61T/+4OIGWSMRxJUsYOY44Cf9w7orIt2OQmF/WgH16qbJKIT1jG3XHx3jP+o090eH7rq13DRleKgXCiROBzMQ==}
+    dev: false

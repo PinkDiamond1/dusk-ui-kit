@@ -1,0 +1,21 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@dusk-network/button': workspace:*
+  '@dusk-network/control': workspace:*
+  '@dusk-network/form': workspace:*
+  '@dusk-network/helpers': workspace:*
+  '@dusk-network/icon': workspace:*
+  '@dusk-network/logo': workspace:*
+  '@dusk-network/menu': workspace:*
+  '@dusk-network/text-field': workspace:*
+
+devDependencies:
+  '@dusk-network/button': link:../../molecules/button
+  '@dusk-network/control': link:../../molecules/control
+  '@dusk-network/form': link:../form
+  '@dusk-network/helpers': link:../../helpers
+  '@dusk-network/icon': link:../../atoms/icon
+  '@dusk-network/logo': link:../../atoms/logo
+  '@dusk-network/menu': link:../../molecules/menu
+  '@dusk-network/text-field': link:../../atoms/text-field

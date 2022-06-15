@@ -11,9 +11,5 @@ node_modules/
 build/
 storybook-static/
 build-storybook.log
-/packages/**/pnpm-lock.yaml
-/meta/**/pnpm-lock.yaml
-/storybook/**/pnpm-lock.yaml
-/docs/**/pnpm-lock.yaml
 coverage/
 pnpm-global

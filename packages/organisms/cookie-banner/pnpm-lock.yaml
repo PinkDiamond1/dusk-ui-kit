@@ -1,0 +1,44 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@dusk-network/button': workspace:*
+  '@dusk-network/card': workspace:*
+  '@dusk-network/content': workspace:*
+  '@dusk-network/control': workspace:*
+  '@dusk-network/form': workspace:*
+  '@dusk-network/group': workspace:*
+  '@dusk-network/heading': workspace:*
+  '@dusk-network/helpers': workspace:*
+  '@dusk-network/icon': workspace:*
+  '@dusk-network/rich-text': workspace:*
+  '@dusk-network/toggle': workspace:*
+  js-cookie: ^3.0.1
+  svelte-dark-mode: ^2.1.0
+
+dependencies:
+  js-cookie: 3.0.1
+  svelte-dark-mode: 2.1.0
+
+devDependencies:
+  '@dusk-network/button': link:../../molecules/button
+  '@dusk-network/card': link:../card
+  '@dusk-network/content': link:../../molecules/content
+  '@dusk-network/control': link:../../molecules/control
+  '@dusk-network/form': link:../form
+  '@dusk-network/group': link:../../molecules/group
+  '@dusk-network/heading': link:../../molecules/heading
+  '@dusk-network/helpers': link:../../helpers
+  '@dusk-network/icon': link:../../atoms/icon
+  '@dusk-network/rich-text': link:../../atoms/rich-text
+  '@dusk-network/toggle': link:../../atoms/toggle
+
+packages:
+
+  /js-cookie/3.0.1:
+    resolution: {integrity: sha512-+0rgsUXZu4ncpPxRL+lNEptWMOWl9etvPHc/koSRp6MPwpRYAhmk0dUG00J4bxVV3r9uUzfo24wW0knS07SKSw==}
+    engines: {node: '>=12'}
+    dev: false
+
+  /svelte-dark-mode/2.1.0:
+    resolution: {integrity: sha512-/QmIqWGwzcfE82FAMuHBlKFwudW7Vcos60Ii8j/mJZ0H6kGAXwL5EGlcc8voBJMJv/i0QZmhp5b1ZX/XKg9NJQ==}
+    dev: false

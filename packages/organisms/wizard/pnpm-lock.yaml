@@ -1,0 +1,11 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@dusk-network/breadcrumb': workspace:*
+  '@dusk-network/helpers': workspace:*
+  '@dusk-network/progress-bar': workspace:*
+
+devDependencies:
+  '@dusk-network/breadcrumb': link:../../molecules/breadcrumb
+  '@dusk-network/helpers': link:../../helpers
+  '@dusk-network/progress-bar': link:../../atoms/progress-bar

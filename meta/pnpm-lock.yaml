@@ -1,0 +1,41 @@
+lockfileVersion: 5.4
+
+specifiers:
+  svelte: ^3.48.0
+  svelte-docster: ^2.0.1
+  tiny-glob: ^0.2.9
+
+devDependencies:
+  svelte: 3.48.0
+  svelte-docster: 2.0.1_svelte@3.48.0
+  tiny-glob: 0.2.9
+
+packages:
+
+  /globalyzer/0.1.0:
+    resolution: {integrity: sha512-40oNTM9UfG6aBmuKxk/giHn5nQ8RVz/SS4Ir6zgzOv9/qC3kKZ9v4etGTcJbEl/NyVQH7FGU7d+X1egr57Md2Q==}
+    dev: true
+
+  /globrex/0.1.2:
+    resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
+    dev: true
+
+  /svelte-docster/2.0.1_svelte@3.48.0:
+    resolution: {integrity: sha512-J00AvzKMbbToGd1OzJzoWRWMNqhKmsKWo66xTz5hxmUMyApJPzI/7IVUNKUsbaTOO0Q/9VVKBvTdEjiiBtmDlg==}
+    peerDependencies:
+      svelte: ^3.38.2
+    dependencies:
+      svelte: 3.48.0
+    dev: true
+
+  /svelte/3.48.0:
+    resolution: {integrity: sha512-fN2YRm/bGumvjUpu6yI3BpvZnpIm9I6A7HR4oUNYd7ggYyIwSA/BX7DJ+UXXffLp6XNcUijyLvttbPVCYa/3xQ==}
+    engines: {node: '>= 8'}
+    dev: true
+
+  /tiny-glob/0.2.9:
+    resolution: {integrity: sha512-g/55ssRPUjShh+xkfx9UPDXqhckHEsHr4Vd9zX55oSdGZc/MD0m3sferOkwWtp98bv+kcVfEHtRJgBVJzelrzg==}
+    dependencies:
+      globalyzer: 0.1.0
+      globrex: 0.1.2
+    dev: true

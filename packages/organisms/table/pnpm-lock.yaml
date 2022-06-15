@@ -1,0 +1,15 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@dusk-network/button': workspace:*
+  '@dusk-network/drop-down': workspace:*
+  '@dusk-network/helpers': workspace:*
+  '@dusk-network/icon': workspace:*
+  '@dusk-network/loading-indicator': workspace:*
+
+devDependencies:
+  '@dusk-network/button': link:../../molecules/button
+  '@dusk-network/drop-down': link:../../atoms/drop-down
+  '@dusk-network/helpers': link:../../helpers
+  '@dusk-network/icon': link:../../atoms/icon
+  '@dusk-network/loading-indicator': link:../../atoms/loading-indicator

@@ -1,0 +1,13 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@dusk-network/button': workspace:*
+  '@dusk-network/group': workspace:*
+  '@dusk-network/helpers': workspace:*
+  '@dusk-network/text-field': workspace:*
+
+devDependencies:
+  '@dusk-network/button': link:../button
+  '@dusk-network/group': link:../group
+  '@dusk-network/helpers': link:../../helpers
+  '@dusk-network/text-field': link:../../atoms/text-field

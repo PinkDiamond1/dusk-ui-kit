@@ -1,0 +1,19 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@dusk-network/helpers': workspace:*
+  marked: ^4.0.16
+
+dependencies:
+  marked: 4.0.16
+
+devDependencies:
+  '@dusk-network/helpers': link:../../helpers
+
+packages:
+
+  /marked/4.0.16:
+    resolution: {integrity: sha512-wahonIQ5Jnyatt2fn8KqF/nIqZM8mh3oRu2+l5EANGMhu6RFjiSG52QNE2eWzFMI94HqYSgN184NurgNG6CztA==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    dev: false
