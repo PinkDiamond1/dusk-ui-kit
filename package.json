@@ -40,7 +40,7 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:generate-output": "jest --json --outputFile=.jest-test-results.json || true",
-    "version:changeset": "changeset version  && pnpm i --lockfile-only",
+    "version:changeset": "changeset version",
     "version:ci": "pnpm version:changeset",
     "update:deps": "pnpm up --latest --recursive --interactive",
     "update:workspace": "pnpm up --recursive --workspace",
