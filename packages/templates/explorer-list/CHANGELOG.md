@@ -1,5 +1,19 @@
 # @dusk-network/explorer-list
 
+## 5.0.6
+
+### Patch Changes
+
+- aa72ab64: Release packages
+- 66c44848: Release packages
+- 3261b224: Release packages
+- 1fb2af47: Release packages
+- Updated dependencies [aa72ab64]
+- Updated dependencies [66c44848]
+- Updated dependencies [3261b224]
+- Updated dependencies [1fb2af47]
+  - @dusk-network/default@5.0.6
+
 ## 5.0.5
 
 ### Patch Changes
