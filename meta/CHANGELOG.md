@@ -1,5 +1,13 @@
 # @dusk-network/meta
 
+## 5.0.6
+
+### Patch Changes
+
+- 66c44848: Release packages
+- 3261b224: Release packages
+- 1fb2af47: Release packages
+
 ## 4.0.6
 
 ### Patch Changes
