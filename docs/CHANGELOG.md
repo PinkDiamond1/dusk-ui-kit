@@ -1,5 +1,24 @@
 # @dusk-network/dusk-ui-kit-docs
 
+## 5.0.7
+
+### Patch Changes
+
+- Updated dependencies [16cee342]
+  - @dusk-network/icon@5.0.7
+  - @dusk-network/rich-text@5.0.7
+  - @dusk-network/helpers@5.0.7
+  - @dusk-network/content@5.0.7
+  - @dusk-network/heading@5.0.7
+  - @dusk-network/menu@5.0.7
+  - @dusk-network/card@5.0.7
+  - @dusk-network/cookie-banner@5.0.7
+  - @dusk-network/footer@5.0.7
+  - @dusk-network/navbar@5.0.7
+  - @dusk-network/styles@5.0.7
+  - @dusk-network/default@5.0.7
+  - @dusk-network/dusk-ui-kit-examples@5.0.6
+
 ## 5.0.6
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @dusk-network/table
 
+## 5.0.7
+
+### Patch Changes
+
+- 16cee342: Release
+- Updated dependencies [16cee342]
+  - @dusk-network/drop-down@5.0.7
+  - @dusk-network/icon@5.0.7
+  - @dusk-network/loading-indicator@5.0.7
+  - @dusk-network/helpers@5.0.7
+  - @dusk-network/button@5.0.7
+
 ## 5.0.6
 
 ### Patch Changes
