@@ -1,5 +1,11 @@
 # @dusk-network/default
 
+## 5.0.7
+
+### Patch Changes
+
+- 16cee342: Release
+
 ## 5.0.6
 
 ### Patch Changes
