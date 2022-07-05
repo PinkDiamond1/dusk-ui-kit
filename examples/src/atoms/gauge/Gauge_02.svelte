@@ -1,5 +1,5 @@
 <script>
-  import Gauge from "@dusk-network/Gauge";
+  import Gauge from "@dusk-network/gauge";
 
   let minValue = 0;
   let maxValue = 20;
