@@ -20,16 +20,20 @@
   "devDependencies": {
     "@dusk-network/button": "workspace:*",
     "@dusk-network/drop-down": "workspace:*",
+    "@dusk-network/group": "workspace:*",
     "@dusk-network/helpers": "workspace:*",
     "@dusk-network/icon": "workspace:*",
-    "@dusk-network/loading-indicator": "workspace:*"
+    "@dusk-network/loading-indicator": "workspace:*",
+    "@dusk-network/text-field": "workspace:*"
   },
   "peerDependencies": {
     "@dusk-network/button": "workspace:*",
     "@dusk-network/drop-down": "workspace:*",
+    "@dusk-network/group": "workspace:*",
     "@dusk-network/helpers": "workspace:*",
     "@dusk-network/icon": "workspace:*",
-    "@dusk-network/loading-indicator": "workspace:*"
+    "@dusk-network/loading-indicator": "workspace:*",
+    "@dusk-network/text-field": "workspace:*"
   },
   "gitHead": "d47daad4d164fdf8a79bc04118e3c06f6b421fd9"
 }

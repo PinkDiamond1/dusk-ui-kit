@@ -3,13 +3,17 @@ lockfileVersion: 5.4
 specifiers:
   '@dusk-network/button': workspace:*
   '@dusk-network/drop-down': workspace:*
+  '@dusk-network/group': workspace:*
   '@dusk-network/helpers': workspace:*
   '@dusk-network/icon': workspace:*
   '@dusk-network/loading-indicator': workspace:*
+  '@dusk-network/text-field': workspace:*
 
 devDependencies:
   '@dusk-network/button': link:../../molecules/button
   '@dusk-network/drop-down': link:../../atoms/drop-down
+  '@dusk-network/group': link:../../molecules/group
   '@dusk-network/helpers': link:../../helpers
   '@dusk-network/icon': link:../../atoms/icon
   '@dusk-network/loading-indicator': link:../../atoms/loading-indicator
+  '@dusk-network/text-field': link:../../atoms/text-field
