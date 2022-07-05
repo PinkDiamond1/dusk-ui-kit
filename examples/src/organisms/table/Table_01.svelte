@@ -8,6 +8,7 @@
     rowsPerPage: 10,
     infinite: true,
     limiter: true,
+    filter: true,
   };
 
   let rows;
