@@ -11,6 +11,7 @@
     rowsPerPage: 10,
     infinite: true,
     limiter: true,
+    filter: true,
   };
   let duration = 3000;
   let rows;
