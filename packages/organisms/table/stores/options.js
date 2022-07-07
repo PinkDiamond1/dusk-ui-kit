@@ -8,7 +8,7 @@ const getOptions = () => {
       sortable: true,
       limiter: false,
       rowsPerPage: 20,
-      columnFilter: false,
+      filter: false,
       infinite: false,
     });
     return {
@@ -24,7 +24,7 @@ const getOptions = () => {
           sortable: typeof opt.sortable === "boolean" ? opt.sortable : true,
           limiter: typeof opt.limiter === "boolean" ? opt.limiter : false,
           rowsPerPage: typeof opt.rowsPerPage === "number" ? opt.rowsPerPage : 20,
-          columnFilter: typeof opt.columnFilter === "boolean" ? opt.columnFilter : false,
+          filter: typeof opt.filter === "boolean" ? opt.filter : false,
           infinite: typeof opt.infinite === "boolean" ? opt.infinite : false,
         };
         options.set(parsed);
