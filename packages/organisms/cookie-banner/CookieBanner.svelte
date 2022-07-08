@@ -92,6 +92,7 @@
     try {
       const settings = JSON.parse(cookie);
       fields = settings;
+      dispatch("cookieOptions", fields);
     } catch (e) {
       deleteCookie(cookieName, cookieConfig);
       showBanner = true;

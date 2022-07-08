@@ -24,6 +24,7 @@ npm i -D @dusk-network/table
     rowsPerPage: 10,
     infinite: true,
     limiter: true,
+    filter: true,
   };
 
   let rows;

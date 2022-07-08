@@ -20,4 +20,8 @@
       @apply mb-20;
     }
   }
+
+  &__footer {
+    @apply mt-auto;
+  }
 }

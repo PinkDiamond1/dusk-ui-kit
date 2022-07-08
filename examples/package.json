@@ -1,6 +1,6 @@
 {
   "name": "@dusk-network/dusk-ui-kit-examples",
-  "version": "5.0.6",
+  "version": "5.0.7",
   "private": true,
   "type": "module",
   "devDependencies": {
@@ -66,6 +66,10 @@
   "peerDependencies": {
     "svelte": "^3.48.0",
     "svelte-preprocess": "^4.10.6"
+  },
+  "optionalDependencies": {
+    "@sveltestack/svelte-query": "^1.6.0",
+    "broadcast-channel": "^4.11.0"
   },
   "engines": {
     "node": "^17.0.0"

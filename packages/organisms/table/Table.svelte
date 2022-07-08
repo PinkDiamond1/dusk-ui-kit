@@ -2,6 +2,10 @@
   import { onDestroy, setContext, getContext } from "svelte";
   import DropDown from "@dusk-network/drop-down";
   import InfiniteScroll from "./InfiniteScroll.svelte";
+  import Group from "@dusk-network/group";
+  import TextField from "@dusk-network/text-field";
+  import Button from "@dusk-network/button";
+  import Icon from "@dusk-network/icon";
   import contexts from "@dusk-network/helpers/contexts.js";
   import { getTable } from "./table.js";
   import { key } from "./key.js";
@@ -29,17 +33,24 @@
    */
   export let duration = 2000;
 
+  let showFilter = false;
+  let filter = {
+    globalValue: "",
+    inputValue: "",
+  };
+
   setContext(key, {});
   createContext();
 
   const table = getTable();
-  const { rows, id, options, pageNumber, columns, activeRow } = getContext(key);
+  const { rows, id, options, pageNumber, columns, activeRow, globalFilters } = getContext(key);
 
   export const dataRows = rows;
 
   $: {
     table.setRows(data);
     options.update(settings);
+    globalFilters.set(filter.globalValue);
   }
 
   onDestroy(() => table.reset());
@@ -49,8 +60,51 @@
 </script>
 
 <div id="{$id}" class="{$$props.class || ''} duk-table">
-  <div class="duk-table__title">
-    <slot name="title" />
+  <div class="duk-table__header">
+    <div class="duk-table__header--title">
+      <slot name="title" />
+      {#if !showFilter && $options.filter}
+        <Icon
+          name="magnify"
+          on:click="{() => {
+            showFilter = !showFilter;
+          }}"
+        />
+      {/if}
+    </div>
+    {#if showFilter && $options.filter}
+      <div class="duk-table__header--filter">
+        <TextField
+          bind:value="{filter.inputValue}"
+          type="text"
+          placeholder="Account name/address"
+        />
+        <Group align="right">
+          <Button
+            variant="brand"
+            size="sm"
+            on:click="{() => {
+              filter.globalValue = filter.inputValue;
+            }}"
+          >
+            <Icon name="check-circle-outline" />
+          </Button>
+          <Button
+            variant="brand"
+            size="sm"
+            on:click="{() => {
+              showFilter = !showFilter;
+              filter = {
+                globalValue: '',
+                inputValue: '',
+              };
+            }}"
+          >
+            <Icon name="close-circle-outline" />
+          </Button>
+        </Group>
+      </div>
+    {/if}
   </div>
   <div class="duk-table__wrapper">
     <table

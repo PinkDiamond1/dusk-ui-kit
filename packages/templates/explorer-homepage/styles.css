@@ -1,11 +1,12 @@
 .duk-template-explorer-homepage {
   &__control-panel {
     @apply mb-6;
+    @apply md:px-8;
   }
 
   &__latest {
     @apply flex flex-wrap -mx-1;
-    @apply md:-mx-8;
+    @apply md:-mx-8 md:px-8;
   }
 
   &__latest-blocks,
