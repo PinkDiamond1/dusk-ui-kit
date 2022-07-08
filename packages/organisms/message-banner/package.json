@@ -1,0 +1,32 @@
+{
+  "name": "@dusk-network/message-banner",
+  "version": "0.0.0",
+  "description": "Dusk UI Kit - Message Banner",
+  "bugs": {
+    "url": "https://github.com/dusk-network/dusk-ui-kit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dusk-network/dusk-ui-kit.git",
+    "directory": "packages/organisms/message-banner"
+  },
+  "type": "module",
+  "main": "index.js",
+  "svelte": "index.js",
+  "module": "index.js",
+  "scripts": {
+    "test": "echo \"Work in progress...\" && exit 1"
+  },
+  "devDependencies": {
+    "@dusk-network/button": "workspace:*",
+    "@dusk-network/group": "workspace:*",
+    "@dusk-network/helpers": "workspace:*",
+    "@dusk-network/icon": "workspace:*"
+  },
+  "peerDependencies": {
+    "@dusk-network/button": "workspace:*",
+    "@dusk-network/group": "workspace:*",
+    "@dusk-network/helpers": "workspace:*",
+    "@dusk-network/icon": "workspace:*"
+  }
+}
