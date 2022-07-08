@@ -1,5 +1,14 @@
 # @dusk-network/form
 
+## 5.0.8
+
+### Patch Changes
+
+- dc59b33e: Release
+- Updated dependencies [dc59b33e]
+  - @dusk-network/icon@5.0.8
+  - @dusk-network/helpers@5.0.8
+
 ## 5.0.7
 
 ### Patch Changes
