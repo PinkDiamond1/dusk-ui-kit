@@ -1,5 +1,37 @@
 # @dusk-network/search-list
 
+## 5.0.7
+
+### Patch Changes
+
+- 16cee342: Release
+- Updated dependencies [16cee342]
+  - @dusk-network/icon@5.0.7
+  - @dusk-network/rich-text@5.0.7
+  - @dusk-network/text-field@5.0.7
+  - @dusk-network/helpers@5.0.7
+  - @dusk-network/button@5.0.7
+  - @dusk-network/control@5.0.7
+
+## 5.0.6
+
+### Patch Changes
+
+- aa72ab64: Release packages
+- 66c44848: Release packages
+- 3261b224: Release packages
+- 1fb2af47: Release packages
+- Updated dependencies [aa72ab64]
+- Updated dependencies [66c44848]
+- Updated dependencies [3261b224]
+- Updated dependencies [1fb2af47]
+  - @dusk-network/icon@5.0.6
+  - @dusk-network/rich-text@5.0.6
+  - @dusk-network/text-field@5.0.6
+  - @dusk-network/helpers@5.0.6
+  - @dusk-network/button@5.0.6
+  - @dusk-network/control@5.0.6
+
 ## 5.0.5
 
 ### Patch Changes
