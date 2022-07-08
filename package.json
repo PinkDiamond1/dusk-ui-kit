@@ -29,7 +29,7 @@
     "preinstall": "npx only-allow pnpm",
     "prepare": "is-ci || husky install",
     "publish:ci": "changeset publish",
-    "changeset": "is-ci || node scripts/prechangeset.cjs && changeset && is-ci || pnpm status && node scripts/postchangeset.cjs",
+    "changeset": "changeset && is-ci || pnpm status && node scripts/postchangeset.cjs",
     "format": "prettier . -w --plugin-search-dir=.",
     "stage": "lint-staged",
     "start": "pnpm start:storybook && pnpm start:docs",
