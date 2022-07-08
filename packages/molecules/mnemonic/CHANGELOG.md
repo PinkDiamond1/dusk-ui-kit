@@ -1,5 +1,16 @@
 # @dusk-network/mnemonic
 
+## 5.0.8
+
+### Patch Changes
+
+- dc59b33e: Release
+- Updated dependencies [dc59b33e]
+  - @dusk-network/text-field@5.0.8
+  - @dusk-network/helpers@5.0.8
+  - @dusk-network/button@5.0.8
+  - @dusk-network/group@5.0.8
+
 ## 5.0.7
 
 ### Patch Changes

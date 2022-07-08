@@ -1,6 +1,6 @@
 {
   "name": "@dusk-network/dusk-ui-kit-storybook",
-  "version": "5.0.7",
+  "version": "5.0.8",
   "private": true,
   "scripts": {
     "build": "build-storybook",
