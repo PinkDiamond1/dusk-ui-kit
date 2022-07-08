@@ -40,6 +40,7 @@ specifiers:
   '@dusk-network/logo': workspace:*
   '@dusk-network/media-content': workspace:*
   '@dusk-network/menu': workspace:*
+  '@dusk-network/message-banner': workspace:*
   '@dusk-network/meta': workspace:*
   '@dusk-network/mnemonic': workspace:*
   '@dusk-network/navbar': workspace:*
@@ -100,6 +101,7 @@ devDependencies:
   '@dusk-network/logo': link:../packages/atoms/logo
   '@dusk-network/media-content': link:../packages/molecules/media-content
   '@dusk-network/menu': link:../packages/molecules/menu
+  '@dusk-network/message-banner': link:../packages/organisms/message-banner
   '@dusk-network/meta': link:../meta
   '@dusk-network/mnemonic': link:../packages/molecules/mnemonic
   '@dusk-network/navbar': link:../packages/organisms/navbar
