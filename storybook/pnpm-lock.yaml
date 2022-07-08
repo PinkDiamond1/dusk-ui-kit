@@ -41,6 +41,7 @@ specifiers:
   '@dusk-network/logo': workspace:*
   '@dusk-network/media-content': workspace:*
   '@dusk-network/menu': workspace:*
+  '@dusk-network/message-banner': workspace:*
   '@dusk-network/meta': workspace:*
   '@dusk-network/mnemonic': workspace:*
   '@dusk-network/navbar': workspace:*
@@ -134,6 +135,7 @@ devDependencies:
   '@dusk-network/logo': link:../packages/atoms/logo
   '@dusk-network/media-content': link:../packages/molecules/media-content
   '@dusk-network/menu': link:../packages/molecules/menu
+  '@dusk-network/message-banner': link:../packages/organisms/message-banner
   '@dusk-network/meta': link:../meta
   '@dusk-network/mnemonic': link:../packages/molecules/mnemonic
   '@dusk-network/navbar': link:../packages/organisms/navbar
@@ -8648,7 +8650,7 @@ packages:
     dev: true
 
   /jsesc/0.5.0:
-    resolution: {integrity: sha1-597mbjXW/Bb3EP6R1c9p9w8IkR0=}
+    resolution: {integrity: sha512-uZz5UnB7u4T9LvwmFqXii7pZSouaRPorGs5who1Ip7VO0wxanFvBL7GkM6dTHlgX+jhBApRetaWpnDabOeTcnA==}
     hasBin: true
     dev: true
 
@@ -11769,7 +11771,7 @@ packages:
     dev: true
 
   /to-fast-properties/2.0.0:
-    resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=}
+    resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
     dev: true
 

@@ -42,7 +42,7 @@
 />
 
 <Story
-  name="Standard cookie banner"
+  name="Standard message banner"
   args="{{
     description: defaultDescription,
     showBanner: true,
