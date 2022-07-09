@@ -51,7 +51,7 @@
     <tbody>
       {#if rows}
         {#each $rows as row}
-          <Row info="{true}">
+          <Row>
             <Datum>{row.id}</Datum>
             <Datum>
               {row.status}
