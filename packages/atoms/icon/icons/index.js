@@ -71,6 +71,7 @@ import MinusCircleOutline from "./MinusCircleOutline.svelte";
 import Nodes from "./Nodes.svelte";
 import NotebookOutline from "./NotebookOutline.svelte";
 import Notification from "./Notification.svelte";
+import PencilOutline from "./PencilOutline.svelte";
 import Plus from "./Plus.svelte";
 import PlusCircleOutline from "./PlusCircleOutline.svelte";
 import PoundBoxOutline from "./PoundBoxOutline.svelte";
@@ -171,6 +172,7 @@ export default {
   Nodes,
   NotebookOutline,
   Notification,
+  PencilOutline,
   Plus,
   PlusCircleOutline,
   PoundBoxOutline,
