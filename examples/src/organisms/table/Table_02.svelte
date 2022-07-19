@@ -51,7 +51,7 @@
     <tbody>
       {#if rows}
         {#each $rows as row}
-          <Row info="{true}">
+          <Row info="{true}" data="{row}" on:selected="{(event) => console.log(event.detail)}">
             <Datum>{row.id}</Datum>
             <Datum>
               {row.status}

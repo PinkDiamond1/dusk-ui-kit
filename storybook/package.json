@@ -47,6 +47,7 @@
     "@dusk-network/logo": "workspace:*",
     "@dusk-network/media-content": "workspace:*",
     "@dusk-network/menu": "workspace:*",
+    "@dusk-network/message-banner": "workspace:*",
     "@dusk-network/meta": "workspace:*",
     "@dusk-network/mnemonic": "workspace:*",
     "@dusk-network/navbar": "workspace:*",

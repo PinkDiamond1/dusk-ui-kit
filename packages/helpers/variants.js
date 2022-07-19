@@ -132,4 +132,9 @@ export default {
     DANGER: "danger",
     DEFAULT: "default",
   },
+  MESSAGE_BANNER: {
+    BRAND: "brand",
+    WARNING: "warning",
+    DANGER: "danger",
+  },
 };

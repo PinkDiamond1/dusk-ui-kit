@@ -6,6 +6,7 @@ import * as Accordion from "./accordion";
 import * as Footer from "./footer";
 import * as Form from "./form";
 import * as Hero from "./hero";
+import * as MessageBanner from "./message-banner";
 import * as Navbar from "./navbar";
 import * as SearchList from "./search-list";
 import * as Table from "./table";
@@ -19,6 +20,7 @@ export {
   Footer,
   Form,
   Hero,
+  MessageBanner,
   Navbar,
   SearchList,
   Table,
