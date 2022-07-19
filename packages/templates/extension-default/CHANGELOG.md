@@ -1,5 +1,13 @@
 # @dusk-network/extension-default
 
+## 5.0.9
+
+### Patch Changes
+
+- e2ca3c82: Release
+- Updated dependencies [e2ca3c82]
+  - @dusk-network/default@5.0.9
+
 ## 5.0.8
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @dusk-network/meta
 
+## 5.0.9
+
+### Patch Changes
+
+- e2ca3c82: Release
+
 ## 5.0.8
 
 ### Patch Changes
