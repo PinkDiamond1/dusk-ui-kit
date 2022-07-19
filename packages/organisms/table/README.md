@@ -63,7 +63,7 @@ npm i -D @dusk-network/table
     <tbody>
       {#if rows}
         {#each $rows as row}
-          <Row info="{true}">
+          <Row data="{row}" on:selected="{(event) => console.log(event.detail)}">
             <Datum>{row.id}</Datum>
             <Datum>
               {row.status}

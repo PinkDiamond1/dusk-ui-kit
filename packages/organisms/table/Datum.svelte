@@ -49,7 +49,7 @@
   });
   const handleClick = () => {
     if (ref && context === contexts.DATUM.ROW.BODY) {
-      activeRowId = ref.parentNode.nextElementSibling.id;
+      activeRowId = ref.parentNode.nextElementSibling?.id;
       $activeRow === activeRowId ? activeRow.set(null) : activeRow.set(activeRowId);
     }
   };
