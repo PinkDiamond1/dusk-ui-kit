@@ -26,35 +26,45 @@
 
   const setActiveHeadRow = (el) => {
     if (el !== undefined && el !== null) {
-      let dataRowIndex = Array.prototype.indexOf.call(el.parentNode.children, el);
-      let headRowIndex = dataRowIndex === 0 ? dataRowIndex : 2 * dataRowIndex;
-      let selectedHeadRow = el.parentNode.previousElementSibling.childNodes[headRowIndex];
-      let headRows = el.parentNode.previousElementSibling.childNodes;
+      let rowIndex = Array.prototype.indexOf.call(el.parentNode.children, el);
+      if (el.parentNode.previousElementSibling) {
+        let filterArr = Array.prototype.filter.call(
+          el.parentNode.previousElementSibling.childNodes,
+          (n) => n.nodeType === 1,
+        );
+        let selectedHeadRow = filterArr[rowIndex];
 
-      headRows.forEach((element) => {
-        if (element.classList) {
-          if (element.classList.contains("duk-table__header-row--selected")) {
-            element.classList.remove("duk-table__header-row--selected");
+        filterArr.forEach((element) => {
+          if (element.classList) {
+            if (element.classList.contains("duk-table__header-row--selected")) {
+              element.classList.remove("duk-table__header-row--selected");
+            }
           }
-        }
-      });
-      selectedHeadRow.classList.add("duk-table__header-row--selected");
+        });
+        selectedHeadRow.classList.add("duk-table__header-row--selected");
+      }
     }
   };
   const setActiveExtraInfoHeadRow = (el) => {
     if (el !== undefined && el !== null) {
-      let dataRowIndex = Array.prototype.indexOf.call(el.parentNode.children, el);
-      let headRowIndex = dataRowIndex === 0 ? dataRowIndex : dataRowIndex / 2;
-      let selectedHeadRow = el.parentNode.previousElementSibling.children[headRowIndex];
-      let headRows = el.parentNode.previousElementSibling.childNodes;
+      let rowIndex = Array.prototype.indexOf.call(el.parentNode.children, el);
+      if (el.parentNode.previousElementSibling) {
+        let filterArr = Array.prototype.filter.call(
+          el.parentNode.previousElementSibling.childNodes,
+          (n) => n.nodeType === 1,
+        );
+        let selectedHeadRow = el.parentNode.previousElementSibling.childNodes[rowIndex];
 
-      headRows.forEach((element) => {
-        if (element.classList) {
-          if (element.classList.contains("duk-table__header-row--selected")) {
-            element.classList.remove("duk-table__header-row--selected");
+        filterArr.forEach((element) => {
+          if (element.classList) {
+            if (element.classList.contains("duk-table__header-row--selected")) {
+              element.classList.remove("duk-table__header-row--selected");
+            }
           }
-        }
-      });
+        });
+        selectedHeadRow.classList.add("duk-table__header-row--selected");
+      }
+
       el.parentNode.childNodes.forEach((element) => {
         if (element.classList) {
           if (element.classList.contains("duk-table__body-row--selected")) {
@@ -64,7 +74,6 @@
       });
       el.classList.add("duk-table__body-row--selected");
       el.nextElementSibling.classList.add("duk-table__body-row--selected");
-      selectedHeadRow.classList.add("duk-table__header-row--selected");
     }
   };
 

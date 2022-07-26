@@ -26,12 +26,19 @@
         el.parentNode.parentNode.children,
         el.parentNode,
       );
-      let headRowIndex = dataRowIndex - 1;
-      let headRows = el.parentNode.parentNode.previousElementSibling.childNodes[headRowIndex];
-      let headRowChildren = headRows.childNodes.length;
-      let headDataIndex = headRowChildren - 4;
-      let headDataCell = headRows.childNodes[headDataIndex];
+      let headRowIndex = dataRowIndex === 1 ? 0 : (dataRowIndex - 1) / 2;
+      let filteredHeadRows = Array.prototype.filter.call(
+        el.parentNode.parentNode.previousElementSibling.childNodes,
+        (n) => n.nodeType === 1,
+      );
+      let headRow = filteredHeadRows[headRowIndex];
+      let filteredHeadRowCells = Array.prototype.filter.call(
+        headRow.childNodes,
+        (n) => n.nodeType === 1,
+      );
 
+      let headDataIndex = filteredHeadRowCells.length - 1;
+      let headDataCell = filteredHeadRowCells[headDataIndex];
       if (headDataCell !== undefined && headDataCell !== null) {
         headDataCell.style.height = `${h}px`;
       }
