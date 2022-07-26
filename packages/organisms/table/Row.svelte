@@ -1,5 +1,5 @@
 <script>
-  import { setContext, getContext, createEventDispatcher } from "svelte";
+  import { onMount, setContext, getContext, createEventDispatcher } from "svelte";
   import contexts from "@dusk-network/helpers/contexts.js";
   import variants from "@dusk-network/helpers/variants.js";
   import { key } from "./key.js";
@@ -10,6 +10,7 @@
   export let id = "__DUK-table-row" + Math.random().toString(36);
   export let data;
   export let info = false;
+  export let active;
 
   const dispatch = createEventDispatcher();
 
@@ -88,6 +89,12 @@
       dispatch("selected", data);
     }
   }
+
+  onMount(() => {
+    if (active !== undefined && active) {
+      handleClick(id);
+    }
+  });
 
   setContext("DUK:table:row:datum:context", getDatumContext(type));
 </script>
