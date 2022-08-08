@@ -80,6 +80,7 @@
 
   function handleClick(id) {
     if (data !== undefined) {
+      ref.parentNode.parentNode.classList.add("duk-table__table--selectable");
       if (!info) {
         activeRow.set(id);
         setActiveHeadRow(ref);
