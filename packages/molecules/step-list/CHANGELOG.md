@@ -1,5 +1,14 @@
 # @dusk-network/step-list
 
+## 5.0.10
+
+### Patch Changes
+
+- c1eb06eb: Release packages
+- Updated dependencies [c1eb06eb]
+  - @dusk-network/icon@5.0.10
+  - @dusk-network/helpers@5.0.10
+
 ## 5.0.9
 
 ### Patch Changes

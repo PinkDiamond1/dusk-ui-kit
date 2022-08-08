@@ -1,6 +1,6 @@
 {
   "name": "@dusk-network/dusk-ui-kit-examples",
-  "version": "5.0.9",
+  "version": "5.0.10",
   "private": true,
   "type": "module",
   "devDependencies": {

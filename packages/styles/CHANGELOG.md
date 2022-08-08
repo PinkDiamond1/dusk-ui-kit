@@ -1,5 +1,11 @@
 # @dusk-network/styles
 
+## 5.0.10
+
+### Patch Changes
+
+- c1eb06eb: Release packages
+
 ## 5.0.9
 
 ### Patch Changes
