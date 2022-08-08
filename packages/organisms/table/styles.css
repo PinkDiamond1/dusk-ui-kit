@@ -122,6 +122,22 @@
       }
     }
 
+    &--selectable {
+      & tbody {
+        & tr {
+          @apply cursor-pointer;
+
+          &.duk-table__row--hidden {
+            @apply cursor-auto;
+          }
+
+          &.duk-table__row--selected {
+            @apply cursor-auto;
+          }
+        }
+      }
+    }
+
     &--expandable {
       & tbody {
         & tr {
